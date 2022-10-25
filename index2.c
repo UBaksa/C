@@ -53,3 +53,42 @@
 //     printf("Kolicnik (sa ostatkom) vasa dva broja je :%d\n", a%b);
 //     return 0;
 // }2.16
+// #include <stdio.h>
+// main(){
+//     int a,b,o,p;
+//     printf("Unesite stranicu a pravougaonika: ");
+//     scanf("%d",&a);
+//     printf("Unesite stranicu b pravougaonika: ");
+//     scanf("%d",&b);
+//     o= 2*a + 2*b;
+//     p= a*b;
+//     printf("\nObim pravougaonika je: %d",o);
+//     printf("\nPovrsina pravougaonika je: %d",p);
+//     return 0;
+// }2.17
+// #include <stdio.h>
+// #define PI 3.14
+// main(){
+//     double r;
+//     printf("Unesite velicinu poluprecnika kruga: ");
+//     scanf("%lf",&r);
+//     printf("Obim je %.2f\n",2*r*PI);
+//     printf("Povrsina je %.2f\n",r*r*PI);
+//     return 0;
+
+// }2.18
+// #include <stdio.h>
+// #define PI 3.14
+// main(){
+//    double p,v,r,h,z;
+//    printf("Unesite duzinu poluprecnika: ");
+//    scanf("%lf",&r);
+//    printf("Unesite duzinu visine: ");
+//    scanf("%lf",&h);
+//    z = r + h;
+//    p = 2*r*PI*z;
+//    v = r*r*PI*h;
+//    printf("\nPovrsina valjka iznosi : %.3f",p);
+//    printf("\nZapremina valjka iznosi : %.3f",v);
+//    return 0;
+// }2.19
