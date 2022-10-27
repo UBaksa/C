@@ -73,3 +73,23 @@ main()
 //     printf("Resenje X = %.2f\n",X);
 //     return 0;
 // }2.21
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+//     float x,y;
+//     printf("Unesite vrednost x: ");
+//     scanf("%f",&x);
+//     y=sqrt(x + x*x + x*x*x);
+//     printf("\n y=%.2f",y);
+//     return 0;
+// }2.22
+#include <stdio.h>
+#include <math.h>
+(){
+    float a,b,m;
+    printf("Unesite vrednost a: ");
+    scanf("%f",&a);
+    printf("Unesite vrednost b: ");
+    scanf("%f",&b);
+
+}
