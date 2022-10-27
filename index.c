@@ -49,8 +49,27 @@ main()
 //     return 0;
 // }
 //2.9
-#include <stdio.h>
-main()
-{
-    
-}
+// #include <stdio.h>
+// main()
+// {
+//     int temp;
+//     double fahr,celsius;
+//     printf("\nUnesite T u stepenima F <ceo broj od 0 do 300>:");
+//     scanf("%d",&temp);
+//     fahr = (double)temp;
+//     celsius=(5.0/9.0)*(fahr-32.0);
+//     printf("\n%d F = %.2f C\n\n ",temp,celsius);
+//     return 0;
+// }2.20
+// #include <stdio.h>
+// int main(){
+//     float X,A,B;
+//     printf("A = ");
+//     scanf("%f",&A);
+//     printf("B = ");
+//     scanf("%f",&B);
+//     X=-B/A;
+//     printf("Jednacina ima oblik %.2fX + %.2f = 0\n",A,B);
+//     printf("Resenje X = %.2f\n",X);
+//     return 0;
+// }2.21
