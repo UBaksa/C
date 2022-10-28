@@ -83,13 +83,38 @@ main()
 //     printf("\n y=%.2f",y);
 //     return 0;
 // }2.22
-#include <stdio.h>
-#include <math.h>
-(){
-    float a,b,m;
-    printf("Unesite vrednost a: ");
-    scanf("%f",&a);
-    printf("Unesite vrednost b: ");
-    scanf("%f",&b);
+// #include <stdio.h>
+// #include <math.h>
+// int main(){
+//     float a,b,m;
+//     printf("Unesite vrednost a: ");
+//     scanf("%f",&a);
+//     printf("Unesite vrednost b: ");
+//     scanf("%f",&b);
+//     m = sqrt(a*a + b*b);
+//     printf("\nModul kompleksnog broja %.2f + %.2fi je:%.2f",a,b,m);
+//     return 0;
+// }2.23
+// #include <stdio.h>
+// #include <math.h>
+// int main(){
+//     float a1,b1,a2,b2,rz1,rz2,rz3,rz4;
+//     printf("a1=");
+//     scanf("%f",&a1);
+//     printf("b1=");
+//     scanf("%f",&b1);
+//     printf("a2=");
+//     scanf("%f",&a2);
+//     printf("b2=");
+//     scanf("%f",&b2);
+//     rz1 = a1 + b1;
+//     rz2 = a2 + b2;
+//     rz3 = a1 + a2;
+//     rz4 = b1 + b2;
+//     printf("\nz1=%.2f + %.2fi",a1,b1);
+//     printf("\nz2=%.2f + %.2fi",a2,b2);
+//     printf("\nz1-z2=%.2f+%.2fi",rz1,rz2);
+//     printf("\nz1+z2=%.2f+%.2fi",rz3,rz4);
+//     return 0;
+// }2.24
 
-}
