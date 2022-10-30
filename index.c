@@ -186,5 +186,60 @@ main()
 //     printf("\nBroj kovanica od 1  dinara:%d",n1);
 //     return 0;
 // }2.28
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+//     int sekunde,d,c,m,s;
+//     printf("Unesite vreme u sekundama:");
+//     scanf("%d",&sekunde);
+//     d=sekunde/86400;
+//     c=(sekunde%86400)/3600;
+//     m=(sekunde%(d*86400 + c*3600))/60;
+//     s=(sekunde%(d*86400 + c*3600 + m*60));
+//     printf("\n d = %d \n c = %d \n m = %d \n s = %d",d,c,m,s);
+//     return 0;
+// }2.29
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+// int broj;
+// printf("Unesite jedan ceo broj:");
+// scanf("%d",&broj);
+// if(broj%2 == 0)
+// printf ("Uneti broj %d je paran.",broj);
+// else 
+// printf("\nUneti broj %d je neparan",broj);
+// return 0;
+// }3.1
+// #include <stdio.h>
+// main(){
+//     int broj;
+//     printf("Unesite broj:");
+//     scanf("%d",&broj);
+//     if(broj < 0)
+//     printf("Uneti broj %d je negativan.",broj);
+//     else if(broj >0)
+//     printf("Uneti broj %d je pozitivan",broj);
+//     else
+//     printf("Uneti broj %d je jednak nuli",broj);
+//     return 0;
+// }3.2
+// #include <stdio.h>
+// main(){
+//     int a,b;
+//     printf("Unesite broj a:");
+//     scanf("%d",&a);
+//     printf("Unesite broj b:");
+//     scanf("%d",&b);
+//     if(a == b)
+//     printf("\nRelacioni odnos izmedju je jednaki su."); 
+//     else if( a > b )
+//     printf("\nBroj a je veci od b");
+//     else 
+//     printf("\nBroj b je veci od a.");
+//     return 0;
+// }3.3
 #include <stdio.h>
-#include <matn.h>
+main(){
+    
+}
