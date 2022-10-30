@@ -117,4 +117,33 @@ main()
 //     printf("\nz1+z2=%.2f+%.2fi",rz3,rz4);
 //     return 0;
 // }2.24
-
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+// double x1,x2,y1,y2,z1,z2,d;
+// printf("Unesite koordinate prve tacke <x1y1z1>:");
+// scanf("%lf" "%lf" "%lf",&x1,&y1,&z1);
+// printf("Unesite koordinate druge  tacke <x2y2z2>:");
+// scanf("%lf" "%lf" "%lf",&x2,&y2,&z2);
+// d = sqrt(pow(x2-x1,2) + pow(y2-y1,2) + pow(z2-z1,2));
+// printf("\nRastojanje izmedju ove tacke iznosi:%.2lf",d);
+// return 0;
+// }2.25
+#include<stdio.h>
+#include<math.h>
+main(){
+    double xa,ya,xb,yb,xc,yc,a,b,c,S,P;
+    printf("Unesite koordinate temena A trougla:");
+    scanf("%lf" "%lf",&xa,&ya);
+    printf("Unesite koordinate temena B trougla:");
+    scanf("%lf" "%lf",&xb,&yb);
+    printf("Unesite koordinate temena c trougla:");
+    scanf("%lf" "%lf",&xc,&yc);
+    a=sqrt(pow(xb-xc) + pow(yb-yc));
+    b=sqrt(pow(xa-xc) + pow(ya-yc));
+    c=sqrt(pow(xa-xb) + pow(ya-yb));
+    S = (a + b + c)/2;
+    P = sqrt(S*(S-a)*(S-b)*(S-c));
+    printf("\nPovrsina trougla: %.2lf",P);
+    return 0;
+}
