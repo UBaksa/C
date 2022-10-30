@@ -129,21 +129,62 @@ main()
 // printf("\nRastojanje izmedju ove tacke iznosi:%.2lf",d);
 // return 0;
 // }2.25
-#include<stdio.h>
-#include<math.h>
-main(){
-    double xa,ya,xb,yb,xc,yc,a,b,c,S,P;
-    printf("Unesite koordinate temena A trougla:");
-    scanf("%lf" "%lf",&xa,&ya);
-    printf("Unesite koordinate temena B trougla:");
-    scanf("%lf" "%lf",&xb,&yb);
-    printf("Unesite koordinate temena c trougla:");
-    scanf("%lf" "%lf",&xc,&yc);
-    a=sqrt(pow(xb-xc) + pow(yb-yc));
-    b=sqrt(pow(xa-xc) + pow(ya-yc));
-    c=sqrt(pow(xa-xb) + pow(ya-yb));
-    S = (a + b + c)/2;
-    P = sqrt(S*(S-a)*(S-b)*(S-c));
-    printf("\nPovrsina trougla: %.2lf",P);
-    return 0;
-}
+// #include<stdio.h>
+// #include<math.h>
+// main(){
+//     double xa,ya,xb,yb,xc,yc,a,b,c,S,P;
+//     printf("Unesite koordinate temena A trougla:");
+//     scanf("%lf" "%lf",&xa,&ya);
+//     printf("Unesite koordinate temena B trougla:");
+//     scanf("%lf" "%lf",&xb,&yb);
+//     printf("Unesite koordinate temena c trougla:");
+//     scanf("%lf" "%lf",&xc,&yc);
+//     a=sqrt(pow(xb-xc,2) +pow(yb-yc,2));
+//     b=sqrt(pow(xa-xc,2) +pow(ya-yc,2));
+//     c=sqrt(pow(xa-xb,2) +pow(ya-yb,2));
+//     S = (a + b + c)/2;
+//     P = sqrt(S*(S-a)*(S-b)*(S-c));
+//     printf("\nPovrsina trougla: %.2lf",P);
+//     return 0;
+// }2.26
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+//     int x,y,z,S;
+//     printf("Unesite tri cela broja:");
+//     scanf("%d" "%d" "%d",&x,&1y,&z);
+//     S = x + y + z;
+//     printf("Uneti broj je %d%d%d",x,y,z);
+//     printf("\nA njihova suma iznosi %d",S);
+//     return 0;
+// }2.27/pomesani
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+//     int xyz,x,y,z,S;
+//     printf("Unesite trocifreni broj:");
+//     scanf("%d",&xyz);
+//     x=xyz/100;
+//     y=(xyz/10)%10;
+//     z=xyz%10;
+//     S=x+y+z;
+//     printf("Cifre trocifrenog broja %d su: %d, %d, %d.",xyz,x,y,z);
+//     printf("\nA suma broja je %d",S);
+//     return 0;
+// }2.27.
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+//     int n,n500,n100,n1;
+//     printf("Unesitie cenu artikla:");
+//     scanf("%d",&n);
+//     n500=n/500;
+//     n100=(n-(n500*500))/100;
+//     n1=n-((n500*500)+(n100*100));
+//     printf("\nBroj novcanica od 500 dinara:%d",n500);
+//     printf("\nBroj novcanica od 100 dinara:%d",n100);
+//     printf("\nBroj kovanica od 1  dinara:%d",n1);
+//     return 0;
+// }2.28
+#include <stdio.h>
+#include <matn.h>
