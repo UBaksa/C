@@ -239,7 +239,72 @@ main()
 //     printf("\nBroj b je veci od a.");
 //     return 0;
 // }3.3
+// #include <stdio.h>
+// main(){
+//     int najveci,broj1,broj2,broj3;
+//     printf("Unesite prvi broj:");
+//     scanf("%d",&broj1);
+//     printf("Unesite drugi broj:");
+//     scanf("%d",&broj2);
+//     printf("Unesite treci broj:");
+//     scanf("%d",&broj3);
+//     najveci = broj1;
+//     if(broj2 > najveci)
+//     najveci=broj2;
+//     if(broj3 > najveci)
+//     najveci=broj3;
+//     printf("Najveci medju njima je broj %d",najveci);
+//     return 0;
+// }3.4/kad se odredjuje koji po redu je najveci nema else if nego je sve if.
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+//     double x,y,z;
+//     printf("Unesite tri realna broja:");
+//     scanf("%lf","%lf","%lf",&x,&y,&z);
+//     if(x<y<z){
+//         printf("Uredjeni brojevi:%.2f %.2f %.2f",x,y,z);
+//     }
+//     else if(x<z<y){
+//         printf("Uredjeni brojevi:%.2f %.2f %.2f",x,z,y);
+//     }
+//     else if(z<x<y){
+//         printf("Uredjeni brojevi:%.2f %.2f %.2f",z,x,y);
+//     }
+//     else if(z<y<x){
+//         printf("Uredjeni brojevi:%.2f %.2f %.2f",z,y,x);
+//     }
+//     else if(y<z<x){
+//         printf("Uredjeni brojevi:%.2f %.2f %.2f",y,z,x);
+//     }
+//     else if(y<x<z){
+//         printf("Uredjeni brojevi:%.2f %.2f %.2f",y,x,z);
+//     }
+//     return 0;
+// }3.5
+// #include <stdio.h>
+// main(){
+//     int a;
+//     printf("Unesi broj bodova <od 0 do 100>:");
+//     scanf("%d",&a);
+//     if(a>90){
+//         printf("Vasa ocena je 10\n.");
+//     }
+//     else if(a>80){
+//         printf("Vasa ocena je 9\n.");
+//     }
+//     else if(a>70){
+//         printf("Vasa ocena je 8\n.");
+//     }
+//     else if(a>60){
+//         printf("Vasa ocena je 7\n.");
+//     }
+//     else if(a>50){
+//         printf("Vasa ocena je 6\n.");
+//     }
+//     else{
+//         printf("Vasa ocena je 50\n.");
+//     }
+//     return 0;
+// }3.7
 #include <stdio.h>
-main(){
-    
-}
