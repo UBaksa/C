@@ -307,4 +307,57 @@ main()
 //     }
 //     return 0;
 // }3.7
-#include <stdio.h>
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+//     int x,a,b;
+//     printf("Unesite gornju granicu opsega a: ");
+//     scanf("%d",&a);
+//     printf("Unesite donju granicu opsega b: ");
+//     scanf("%d",&b);
+//     printf("Unesite broj x: ");
+//     scanf("%d",&x);
+//     if((b <= x*x) && (x*x <= a))
+//         printf("Kvadrat unetog broja se nalazi unutar ovog opsega");
+//     else
+//         printf("Kvadrat unetog broja se ne nalazi unutar ovog opsega");
+//     return 0;
+// }3.8
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+//     int x,y,z;
+//     printf("Unesite x: ");
+//     scanf("%d",&x);
+//     printf("Unesite y: ");
+//     scanf("%d",&y);
+//     if(x>y){
+//     z=x-y;
+//     printf("Razlika je %d",z);
+//     }
+//     if(y>x){
+//     z=y-x;
+//     printf("Razlika je %d",z);
+//     }
+//     return 0;
+// }3.9
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+//     int x,y;
+//     printf("Unesite x broj:");
+//     scanf("%d",&x);
+//     if(x<0){
+//         y=-1;
+//         printf("Signum funkcija od x je %d",y);
+//     }
+//     else if(x==0){
+//         y==0;
+//         printf("Signum funkcija od x je %d",y);       
+//     }
+//     else{
+//         y=1;
+//         printf("Signum funkcija od x je %d",y);
+//     }
+//     return 0;
+// }3.10
