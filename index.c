@@ -361,3 +361,64 @@ main()
 //     }
 //     return 0;
 // }3.10
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+//     float x,y;
+//     printf("Unesite x broj: ");
+//     scanf("%f",&x);
+//     if((-2<x) && (x<=2)){
+//     y=2*x;
+//     printf("Funkcija od x je %.2f",y);
+//     }
+//     else if((5<=x) && (x<7)){
+//     y=3*x - 1;
+//     printf("Funkcija od x je %.2f",y);
+//     }
+//     else{
+//     y=1/x;
+//     printf("Funkcija od x je %.2f",y);
+//     }
+//     return 0;   
+// }3.11
+
+// 3.12 SE NE ZNA!!!!!!!!!
+// #include <stdio.h>
+// #include <math.h>
+// main(){
+//     float a,b,c,S,P;
+//     printf("Unesite stranicu a: ");
+//     scanf("%f",&a);
+//     printf("Unesite stranicu b: ");
+//     scanf("%f",&b);
+//     printf("Unesite stranicu c: ");
+//     scanf("%f",&c);
+//     if(a+b>c && a+c>b && c+b>a){
+//     S = (a+b+c)/2;
+//     P = sqrt(S*(S-a)*(S-b)*(S-c));
+//     printf("\nDate stranice formiraju trougao.");
+//     printf("\nPovrsina datog trougla iznosi:%.2f",P);
+//     }
+//     else
+//     printf("Date stranice ne mogu formirati trougao.");
+//     return 0;
+// }3.13
+#include <stdio.h>
+#include <math.h>
+#define PI 3.141592 
+main(){
+    float xa,ya,xb,yb,xc,yc,S,P;
+    printf("Unesite koordinate A temena:");
+    scanf("%f %f",&xa,&ya);
+    printf("Unesite koordinate B temena:");
+    scanf("%f %f",&xb,&yb);
+    printf("Unesite koordinate C temena:");
+    scanf("%f %f",&xc,&yc);
+    a = sqrt(pow(xb-xc,2) + pow(yb-yc,2));
+    b = sqrt(pow(xc-xa,2) + pow(yc-ya,2));
+    c = sqrt(pow(xa-xb,2) + pow(ya-yb,2));
+    printf("\nStranice na osnovu koordinata su sledece:");
+    printf("\na = %.2f",a);
+    printf("\nb = %.2f",b);
+    printf("\nc = %.2f",c);
+}
