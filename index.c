@@ -403,22 +403,40 @@ main()
 //     printf("Date stranice ne mogu formirati trougao.");
 //     return 0;
 // }3.13
-#include <stdio.h>
-#include <math.h>
-#define PI 3.141592 
-main(){
-    float xa,ya,xb,yb,xc,yc,S,P;
-    printf("Unesite koordinate A temena:");
-    scanf("%f %f",&xa,&ya);
-    printf("Unesite koordinate B temena:");
-    scanf("%f %f",&xb,&yb);
-    printf("Unesite koordinate C temena:");
-    scanf("%f %f",&xc,&yc);
-    a = sqrt(pow(xb-xc,2) + pow(yb-yc,2));
-    b = sqrt(pow(xc-xa,2) + pow(yc-ya,2));
-    c = sqrt(pow(xa-xb,2) + pow(ya-yb,2));
-    printf("\nStranice na osnovu koordinata su sledece:");
-    printf("\na = %.2f",a);
-    printf("\nb = %.2f",b);
-    printf("\nc = %.2f",c);
-}
+// #include <stdio.h>
+// #include <math.h>
+// #define PI 3.141592 
+// main(){
+//     float xa,ya,xb,yb,xc,yc,a,b,c,S,P,alfa,beta,gama;
+//     printf("Unesite koordinate A temena:");
+//     scanf("%f %f",&xa,&ya);
+//     printf("Unesite koordinate B temena:");
+//     scanf("%f %f",&xb,&yb);
+//     printf("Unesite koordinate C temena:");
+//     scanf("%f %f",&xc,&yc);
+//     a = sqrt(pow(xb-xc,2) + pow(yb-yc,2));
+//     b = sqrt(pow(xc-xa,2) + pow(yc-ya,2));
+//     c = sqrt(pow(xa-xb,2) + pow(ya-yb,2));
+//     printf("\nStranice na osnovu koordinata su sledece:");
+//     printf("\na = %.2f",a);
+//     printf("\nb = %.2f",b);
+//     printf("\nc = %.2f",c);
+//     if(a+b>c && a+c>b && c+b>a){
+//     alfa = acos( (b*b+c*c-a*a) / (2*b*c) );
+//     beta = acos( (c*c+a*a-b*b) / (2*c*a) );
+//     gama = acos( (a*a+b*b-c*c) / (2*a*b) );
+//     alfa *= 180/PI;
+//     beta *= 180/PI;
+//     gama *= 180/PI;
+//     printf("\nUglovi:\n");
+//     printf("Alfa = %.2f stepeni\n", alfa);
+//     printf("Beta = %.2f stepeni\n", beta);
+//     printf("Gama = %.2f stepeni\n", gama); 
+//     S = (a+b+c)/2;
+//     P = sqrt(S*(S-a)*(S-b)*(S-c));
+//     }
+//     else{
+//         printf("Ne moze se kreirato trougao od datih stranica.");
+//     }
+//     return 0;
+// } 3.14
