@@ -440,3 +440,17 @@ main()
 //     }
 //     return 0;
 // } 3.14
+#include<stdio.h>
+#include<math.h>
+main(){
+    char z;
+    double a,b,x;
+    printf("Unesite znak vece ili jednako:");
+    scanf("%c",&z);
+    printf("Unesite koeficijente:");
+    printf("a=");
+    scanf("%lf",&a);
+    printf("b = ");
+    scanf("%lf",&b);
+    printf("Linearna nejednacina ima oblik %.2f*%.2f + %.2c")
+}
