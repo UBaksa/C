@@ -452,5 +452,13 @@ main(){
     scanf("%lf",&a);
     printf("b = ");
     scanf("%lf",&b);
-    printf("Linearna nejednacina ima oblik %.2f*%.2f + %.2c")
+    printf("Linearna nejednacina ima oblik %.2f*%.2f + %.2c",a,b,z);
+    x=-b/a;
+    if(a>0){
+        printf("\nNejednacina ima resenje x%c%.2f",z,x);
+    }
+    else{
+        printf("\nNejednacina ima resnje .2f%c%x",z,x);
+    }
+    return 0;
 }
