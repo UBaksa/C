@@ -171,3 +171,161 @@
 //     }
 //     return 0;
 // }4.20
+
+// main()
+// {
+//  int sat,min,sec,n;
+//  printf("Unesite neki broj n");
+//  scanf("%d",&n);
+//  for(sat=0;sat<=24;sat++)
+//  for(min=0;min<=59;min++)   
+//  for(sec=0;sec<=59;sec++){
+//     if(n==(sat/10 + sat%10 + min/10 + min%10 + sec/10 + sec%10)){
+//         printf("\n%dsati, %dminuta, %dsekundi.",sat,min,sec);
+//     }
+//  }   
+//  return 0;
+// }4.22
+
+// main()
+// {
+//     double xmin,xmax,dx,x,y;
+//     printf("xmin=");
+//     scanf("%lf",&xmin);
+//     printf("xmax=");
+//     scanf("%lf",&xmax);
+//     printf("dx=");
+//     scanf("%lf",&dx);
+//     for(x=xmin;x<=xmax;x+=dx){
+//         y=(2*x+1)/(x*x-1);
+//         printf("%10.3f %10.3f\n",x,y);
+//     }
+//     return 0;
+// }4.23
+
+// main(){
+//     int i;
+//     double xmin,xmax,dx,x,y,n,p;
+//     printf("xmin=");
+//     scanf("%lf",&xmin);
+//     printf("xmax=");
+//     scanf("%lf",&xmax);
+//     printf("dx=");
+//     scanf("%lf",&dx);
+//     printf("Stepen funkcije.");
+//     scanf("%lf",&n);
+//     for(x=xmin;x<=xmax;x+=dx){
+//         for(i=1;i<=n;i++){
+//             p=x;
+//             y=(1+p);
+//         }
+//         printf("%10.6f %11.6f\n",x,y);
+//         p=1;
+//         y=1;
+//     }
+//     return 0;
+// }4.24
+
+// main()
+// {
+//  int i, j, n;
+//  printf(" n= ");
+//  scanf("%d", &n);
+//  printf("\n");
+//  for(i=0; i<n; i++)
+//  {
+//  for(j=0; j<2*n; j++)
+//  printf("1");
+//  printf("\n");
+//  }
+//  getche();
+//  return 0;
+// }4.25/a
+// main()
+// {
+//  int i, j, n;
+//  printf(" n= ");
+//  scanf("%d", &n);
+//  printf("\n");
+//  for(i=0; i<n; i++)
+//  {
+//  for(j=0; j<2*n; j++)
+//  printf("%d", j);
+//  printf("\n");
+//  }
+//  getche();
+//  return 0; 
+// }
+
+// 5.WHILE PETLJA!!!!
+// main(){
+//     int i;
+//     i=1;
+//     while(i<=5){
+//         printf("\nPozdrav svima !");
+//         i++;
+//     }
+//     return 0;
+// }5.1
+
+main()
+// {
+//     int i;
+//     i=1;
+//     while(i<=10){
+//         printf("\n%d",i);
+//         i++;
+//     }
+//     return 0;
+// }5.2/a
+
+// {
+//     int i;
+//     i=1;
+//     while(i<=10){
+//         if(i%2==0){
+//             printf("%d",i);
+//         }
+//         i++;
+//     }
+//     return 0;
+// }5.2\b
+// {
+//     int i;
+//     i=10;
+//     while(i<=10 & i>0){
+//         printf("\n%d",i);
+//         i--;
+//     }
+//     return 0;
+// }
+// {
+//     int n,i,s;
+//     i=1;
+//     s=0;
+//     printf("n=");
+//     scanf("%d",&n);
+//     while(i<=n){
+//         s+=i;
+//         i++;
+//     }
+//         printf("\nSuma=%d",s);
+//     return 0;
+// }5.3
+{
+//     int i,n,s;
+//     i=1;
+//     s=0;
+//     printf("n=");
+//     scanf("%d",&n);
+//     while(i<=n){
+//         s+=i;
+//         i=i+3;
+//     }
+//     printf("Suma svakog treceg je:%d",s);
+//     return 0;
+// }5.4
+
+{
+    
+}
