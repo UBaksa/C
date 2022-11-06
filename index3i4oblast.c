@@ -185,3 +185,70 @@
 //     }
 //     return 0;
 // }4.7
+
+// main(){ 
+// int i, m, n;
+//  long s;
+//  printf("n= ");
+//  scanf("%d",&n);
+//  printf("m= ");
+//  scanf("%d",&m);
+//  s=1;
+//  for(i=0;i<=m;i++)
+//  s=s*(n+i*m);
+//  printf("\ns= %ld\n", s);
+//  getche();
+//  return 0;
+// }4.8a/
+main(){
+//     int i , m, n, znak;
+//     float S;
+//     printf("Unesite n.");
+//     scanf("%d",&n);
+//     printf("Unesite m.");
+//     scanf("%d",&m);
+//     S=0;
+//     znak=1;
+//     for(i=1;i<=m;i++){
+//         S=S+(float)znak/(n+i*m);
+//         znak=-znak;
+//     }
+//     printf("Izraz iznosi : %.5f\n",S);
+//     return 0;
+// }4.7/b slabo znam...
+
+// main(){
+//     int i,n,f;
+//     float s,q;
+//     printf("Unesite n:");
+//     scanf("%d",&n);
+//     s=0;
+//     f=1;
+//     q=0;
+//     for(i=1;i<=n;i++){
+//         f=f*i;
+//         q=q+1/(1+i);
+//         s=s+ f/q;
+//     }
+//     printf("Izraz = %.5f",s);
+//     return 0;
+// }4.8/a
+
+// 4.9 se ne zna...
+main(){
+    int i,n;
+    float s,p,x;
+    s=0;
+    p=1;
+    printf("Unesite x;");
+    scanf("%f",&x);
+    printf("Unesite n;");
+    scanf("%f",&n);
+    for(i=1;i<=n;i++){
+        p=p*sinx(x);
+        s=s+p;
+    }
+    printf("S= %.3f",s);
+    return 0;
+}
+
