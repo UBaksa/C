@@ -68,3 +68,106 @@
 //     }
 //     printf("\nSuma je :%d",s);
 // }4.13
+
+// main(){
+//     int a,b,c;
+//     for(a=1;a<=9;a++)
+//         for(b=1;b<=9;b++)
+//             for(c=1;c<=9;c++){
+//                 if(b == 2+a && c == b + 1){
+//                     printf("%d%d%d\n",a,b,c);
+//                 }
+//             }
+//             return 0;
+// }4.14
+
+// main(){
+//     int a,b,c,broj;
+//     printf("Armstrongovi brojevi(trocifreni) su sledeci:\n");
+//     for(a=1;a<=9;a++)
+//         for(b=1;b<=9;b++)
+//             for(c=1;c<=9;c++){
+//                 broj=100*a + 10*b + c;
+//                 if(broj == pow(a,3)+ pow(b,3)+pow(c,3))
+//                 printf("%d\n",broj);
+//             }
+//             return 0;
+// }4.15.
+
+// main(){
+//     int a,b,c,broj;
+//     printf("To su brojevi:\n");
+//     for(a=1;a<=9;a++)
+//         for(b=0;b<9;b++)
+//             for(c=0;c<9;c++){
+//                 broj=100*a + 10*b + c;
+//                  if(broj == ((10*a+b)*(10*a+b)-c*c)){
+//                     printf("%d\n",broj);
+//                 }
+//                 return 0;
+//     }
+// }4.16
+
+// main(){
+//     int a,b,c,broj,dva;
+//     printf("To su brojevi:\n");
+//     for(a=1;a<=9;a++)
+//         for(b=0;b<9;b++)
+//             for(c=0;c<9;c++){
+//                 broj=100*a +10*b +c;
+//                 dva=10*a+c;
+//                 if(broj%dva == 0){
+//                     printf("%d \n",broj);
+//                 }
+//             }
+// return 0;
+// }4.17
+// main()
+// {
+//     int a,b,c,s,n,broj;
+//     s=0;
+//     n=0;
+//     for(a=1;a<=9;a++)
+//         for(b=0;b<9;b++)
+//             for(c=0;c<9;c++){
+//                 broj=100*a + 10*b + c;
+//                 if(a+b+c==5){
+//                     n++;
+//                     s=s+broj;
+//                 }
+//             }
+//             printf("Suma=%d\n",s);
+//             printf("Ukupno ima %d brojeva\n",n);
+//             return 0;
+// }4.18.
+
+// main(){
+//     int i,n;
+//     printf("Unesite broj n=");
+//     scanf("%d",&n);
+//     for(i=1;i<=n;i++){
+//         if(n%i == 0){
+//             printf("\n%d",i);
+//         }
+//     }
+//     return 0;
+// }4.19
+
+// main(){
+//     int i,n,s;
+//     s=0;
+//     printf("Unesite n.");
+//     scanf("%d",&n);
+//     for(i=1;i<n;i++){
+//         if (n%i ==0)
+//         {
+//             s+=i;
+//         }
+//         if(s==n){
+//             printf("Broj %d je savrsen.\n",n);
+//         }
+//         else
+//         printf("Broj %d nije savrsen\n",n);
+//     }
+//     return 0;
+// }4.20
