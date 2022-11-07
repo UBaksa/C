@@ -326,6 +326,36 @@ main()
 //     return 0;
 // }5.4
 
-{
-    
-}
+// {
+//     int i,n;
+//     float s;
+//     printf("Unesite n;");
+//     scanf("%d",&n);
+//     s=0;
+//     i=1;
+//     while(i<=n){
+//         s+=1./pow(2*i + 1,2);
+//         i++;
+//     }
+//     return 0;
+// }5.5
+
+// main(){
+//     int i,n,m;
+//     float s;
+//     printf("n=");
+//     scanf("%d",&n);
+//     printf("m=");
+//     scanf("%d",&m);
+//     s=0;
+//     i=n;
+//     while(n<=m)
+//     if(i%2==0){
+//         s=s+pow(i,2);
+//         else 
+//         s=s+pow(i,3);
+//         i++;
+//     }
+//     printf("S = %f",s);
+//     return 0;
+// }5.6
