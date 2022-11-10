@@ -16,6 +16,25 @@
 //     return 0;
 // }
 
-main(){
-    
+main()
+{
+ double suma=1.0, x, eps, clan;
+ int n=1, i;
+ printf("\n x= ");
+ scanf("%lf",&x);
+ printf("\n eps= ");
+ scanf("%lf",&eps);
+ clan=x;
+ while(abs(clan)>=eps)
+ {
+ suma+=clan;
+ clan=x;
+ n++;
+ for(i=2;i<=n;i++)
+ clan=-clan*(-x/i);
+ }
+ printf("\n S= %lf", suma);
+ printf("\n Br.elemenata= %d\n", n);
+ getche();
+ return 0;
 }
