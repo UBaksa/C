@@ -16,25 +16,62 @@
 //     return 0;
 // }
 
+// main()
+// {
+//  double suma=1.0, x, eps, clan;
+//  int n=1, i;
+//  printf("\n x= ");
+//  scanf("%lf",&x);
+//  printf("\n eps= ");
+//  scanf("%lf",&eps);
+//  clan=x;
+//  while(abs(clan)>=eps)
+//  {
+//  suma+=clan;
+//  clan=x;
+//  n++;
+//  for(i=2;i<=n;i++)
+//  clan=-clan*(-x/i);
+//  }
+//  printf("\n S= %lf", suma);
+//  printf("\n Br.elemenata= %d\n", n);
+//  getche();
+//  return 0;
+// }
+// main()
+// {
+//  double suma=1.0, x, a, eps, clan;
+//  int i=0;
+//  printf("\n x= ");
+//  scanf("%lf",&x);
+//  printf("\n a= ");
+//  scanf("%lf",&a);
+//  printf("\n eps= ");
+//  scanf("%lf",&eps);
+//  clan=x;
+//  while(fabs(clan)>=eps)
+//  {
+//  i++;
+//  clan=clan*(a-i+1)*x/i;
+//  suma=suma+clan;
+//  }
+//  printf("\n S= %lf\n", suma);
+//  getche();
+//  return 0;
+// }
 main()
 {
- double suma=1.0, x, eps, clan;
- int n=1, i;
- printf("\n x= ");
- scanf("%lf",&x);
- printf("\n eps= ");
- scanf("%lf",&eps);
- clan=x;
- while(abs(clan)>=eps)
+ int a, b;
+ printf(" a= ");
+ scanf("%d",&a);
+ printf(" b= ");
+ scanf("%d", &b);
+ while(a!=b)
  {
- suma+=clan;
- clan=x;
- n++;
- for(i=2;i<=n;i++)
- clan=-clan*(-x/i);
+ if(a>b) a-=b;
+ else b-=a;
  }
- printf("\n S= %lf", suma);
- printf("\n Br.elemenata= %d\n", n);
+ printf("\n NZD=: %d\n",a);
  getche();
  return 0;
 }
