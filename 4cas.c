@@ -75,3 +75,45 @@ main()
  getche();
  return 0;
 }
+#include <stdio.h>
+#include <math.h>
+main()
+{
+ int m=0, n, pomoc, i;
+ float suma=0, koren;
+ printf("\n Unesite m i n [0<m<n]: ");
+ while(m<1 || n<1)
+ scanf("%d%d",&m,&n);
+ if(m>n)
+ {
+ pomoc=n;
+ n=m;
+ m=pomoc;
+ }
+ if(m%2==0) m++;
+ for(i=m;i<=n;i=i+2)
+ {
+ koren=sqrt(i);
+ suma+=koren;
+ }
+ printf("\n Suma korena je %.3f\n", suma);
+ getche();
+ return 0;
+}
+#include <stdio.h>
+main()
+{
+ int znak=1, i=1, n;
+ float suma=0;
+ printf("\n n= ");
+ scanf("%d",&n);
+ while(i<=n)
+ {
+ suma+=(float)znak/i;
+ i++;
+ znak=-znak;
+ }
+ printf("\n S= %.3f\n", suma);
+ getche();
+ return 0;
+}
