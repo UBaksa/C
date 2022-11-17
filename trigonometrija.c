@@ -20,3 +20,60 @@ main()
     }
     return 0;
 }
+#include <stdio.h>
+main()
+{
+ int i;
+ for(i=1; i<=500; i++)
+ if(i%3==0 && i%4==0 && i%5==0 && i%7==0)
+ {
+ printf("%d\n", i);
+ break;
+ }
+ getche();
+ return 0;
+}
+#include <stdio.h>
+main()
+{
+ int n, i;
+ float s;
+ while(1)
+ {
+ printf(" n= ");
+ scanf("%d", &n);
+ if(n <= 0) break;
+ s=0;
+ for(i=1; i<=n; i++)
+ s+=1./(i*i);
+ printf (" S= %.6f\n\n", s);
+ }
+ getche();
+ return 0;
+}
+#include <stdio.h>
+main()
+{
+ while(1)
+ {
+ double a, s, d;
+ int n,i;
+ printf("\n n= ");
+ scanf("%d", &n);
+ if(n <= 0) break;
+ printf(" Elementi: ");
+ s=0, d=0;
+ for(i=1; i<=n; i++)
+ {
+ scanf("%lf",&a);
+ s+=a;
+ d+=a*a;
+ }
+ s/=n;
+ d=sqrt(d/n-s*s);
+ printf(" s= %.4f\n", s);
+ printf(" d= %.4f\n", d);
+ }
+ getche();
+ return 0;
+}
