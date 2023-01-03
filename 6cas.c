@@ -38,19 +38,61 @@
 // }
 
 
-main(){
-    int niz[MAX],n,i,S=0,k=0;
-    printf("Unesite duzinu niza(broj elemenata)");
-    scanf("%d",&n);
-    printf("Unesite elemente niza");
+// main(){
+//     int niz[MAX],n,i,S=0,k=0;
+//     printf("Unesite duzinu niza(broj elemenata)");
+//     scanf("%d",&n);
+//     printf("Unesite elemente niza");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);//niz[o],niz[1],niz[2]...
+//         if(niz[i]%3 == 0){
+//             S+=niz[i];
+//             k++;
+//         }
+//     }
+//     float as = (float)S/k;
+//     printf("AR sredina niza iznosi %.2f",as);
+//     return 0;
+// }
+
+// main(){
+//     int A[MAX],B[MAX],n,i,S=0;
+//     printf("Unesite duzinu niza(broj elemenata)");
+    // scanf("%d",&n);
+//     printf("Unesite elemente niza A");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&A[i]);
+//     }
+//     printf("Unesite elemente niza B");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&B[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         S+=A[i]*B[i];
+//     }
+//     printf("Skalarni proizvod iznosi %.2f",S);
+//     return 0;
+// }
+
+// unos svakog niza je isti i iste su for petlje!
+
+
+// 10.11
+
+void unos(int niz[MAX],int n){
+    printf("Unesite elemente niza A");
     for(i=0;i<n;i++){
-        scanf("%d",&niz[i]);//niz[o],niz[1],niz[2]...
-        if(niz[i]%3 == 0){
-            S+=niz[i];
-            k++;
-        }
+        scanf("%f",&A[i]);
     }
-    float as = (float)S/k;
-    printf("AR sredina niza iznosi %.2f",as);
-    return 0;
+}
+void ispis(int niz[MAX],int w){
+    int i;
+    printf("Elementi niza su\n");
+    for(i=0;i<w;i++)
+    printf("%d",&niz[i]);
+}
+
+// 10.22
+main(){
+
 }
