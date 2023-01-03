@@ -1,6 +1,7 @@
 // 2.6. Саставити програм којим се реални број унет са тастатуре заокружује на две децимале.
 
 #include <stdio.h>
+#include <math.h>
 
 // main()
 // {
@@ -74,5 +75,51 @@ main()
 //     printf("Jednacina ima oblik %.2fX + %.2f = 0.",a,b);
 //     x=-b/a;
 //     printf("Resenje jednacine je %.2f",x);
+//     return 0;
+// }
+// 2.22. Саставити програм за рачунање израза y = x + x 2 + x3 за унету вредност х.
+// {
+//     float x,izraz;
+//     printf("Unesite x:");
+//     scanf("%f",&x);
+//     izraz = sqrt(x + x*x + x*x*x);
+//     printf("Y= %.2f",izraz);
+//     return 0;
+// }
+// 2.23. Саставити програм који исписује вредност модула комплексног броја z = a + bi за унете
+// вредности а и b. Модул се рачуна по формули z = a2 + b2 .
+// {
+//     float a,b,z;
+//     printf("Unesite a i b");
+//     scanf("%f %f",&a,&b);
+//     printf("Kompleksan broj: z = %.2f + %.2fi",a,b);
+//     z = sqrt(a*a + b*b);
+//     printf("Moduo kompleksnog broja iznosi:%.2f",z);
+//     return 0;
+// }
+// 2.24. Саставити програм који за унете реалне и имагинарне делове два комплексна броја исписује
+// та да два броја у облику z = a + bi 1 и z = c + di 2 , а затим рачуна њихов збир и разлику
+// ( ) ( ) 1 2 z ± z = a + c ± i b + d .
+// {
+//     float a,b,c,d,plus,minus;
+//     printf("Unesite vrednosti prvog kompl. broja:");
+//     scanf("%f %f",&a,&b);
+//     printf("Unesite vrednosti drugog kompl. broja:");
+//     scanf("%f %f",&c,&d);
+//     printf("\nZ1 + Z2 = %.2f + i%.2f",a+c,b+d);
+//     printf("\nZ1 - Z2 = %.2f - i%.2f",a+c,b+d);
+//     return 0;
+// }
+
+// 2.25. Саставити програм за исписивање растојања између две тачке у тродимензионалном
+// простору на основу унетих координата тачака.
+// {
+//     float x1,x2,y1,y2,z1,z2,d;
+//     printf("Unesite koordinate xyz:");
+//     scanf("%f %f %f",&x1,&y1,&z1);
+//     printf("Unesite koordinate xyz od druge tacke:");
+//     scanf("%f %f %f",&x2,&y2,&z2);
+//     d=sqrt(pow(x2-x1,2) + pow(y2-y1,2) + pow(z2-z1,2));
+//     printf("Njihovo rastojanje iznosi: %.2f",d);
 //     return 0;
 // }
