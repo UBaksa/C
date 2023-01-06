@@ -133,17 +133,42 @@ main()
 // a b c
 // S
 // = + + , P = S (S - a)(S - b)(S - c)
+// {
+// double xA, yA, xB, yB, xC, yC, a, b, c, s, P;
+// printf("Koordinate temena trougla\n");
+// printf(" prvo teme <xA,yA>: "); scanf("%lf%lf",&xA,&yA);
+// printf("drugo teme <xB,yB>: "); scanf("%lf%lf",&xB,&yB);
+// printf("trece teme <xC,yC>: "); scanf("%lf%lf",&xC,&yC);
+// a=sqrt(pow(xB-xC,2)+pow(yB-yC,2));
+// b=sqrt(pow(xC-xA,2)+pow(yC-yA,2));
+// c=sqrt(pow(xA-xB,2)+pow(yA-yB,2));
+// s=(a+b+c)/2;
+// P=sqrt(s*(s-a)*(s-b)*(s-c));
+// printf("\nPovrsina trougla: %.2f\n", P);
+// return 0;
+// }
+//2.27 Саставити програм који за унети троцифрени број исписује његове цифре и суму цифара.
+// {
+//     int broj,prva,druga,treca,suma;
+//     suma = 0;
+//     printf("Unesite trocifren broj:");
+//     scanf("%d",&broj);
+//     prva = broj / 100;
+//     druga = (broj%100)/10;
+//     treca = broj%10;
+//     suma = prva+druga+treca;
+//     printf("\nCifre su: %d %d %d",prva,druga,treca);
+//     printf("\nSuma iznosi %d",suma);
+//     return 0;
+// }
+// 2.28. Саставити програм који учитава вредност производа у динарима, а затим израчунава и
+// приказује колико је потребно новчаница од 500 дин., 100 дин. и 1 дин. за плаћање тог производа.
 {
-double xA, yA, xB, yB, xC, yC, a, b, c, s, P;
-printf("Koordinate temena trougla\n");
-printf(" prvo teme <xA,yA>: "); scanf("%lf%lf",&xA,&yA);
-printf("drugo teme <xB,yB>: "); scanf("%lf%lf",&xB,&yB);
-printf("trece teme <xC,yC>: "); scanf("%lf%lf",&xC,&yC);
-a=sqrt(pow(xB-xC,2)+pow(yB-yC,2));
-b=sqrt(pow(xC-xA,2)+pow(yC-yA,2));
-c=sqrt(pow(xA-xB,2)+pow(yA-yB,2));
-s=(a+b+c)/2;
-P=sqrt(s*(s-a)*(s-b)*(s-c));
-printf("\nPovrsina trougla: %.2f\n", P);
-return 0;
+    int cena,petsto,sto,dinar;
+    printf("Unesite cenu artikla:");
+    scanf("%d",&cena);
+    petsto = cena/500;
+    sto = (cena%500)/100;
+    dinar = (cena%500)%100;
+    printf("\nPotrebno je :")
 }
