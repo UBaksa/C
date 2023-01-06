@@ -170,5 +170,6 @@ main()
     petsto = cena/500;
     sto = (cena%500)/100;
     dinar = (cena%500)%100;
-    printf("\nPotrebno je :")
+    printf("\nPotrebno je :\n %d od 500 \n %d od 100 \n %d od po jedan dinar.",petsto,sto,dinar);
+    return 0;
 }
