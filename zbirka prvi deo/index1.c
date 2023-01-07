@@ -163,13 +163,28 @@ main()
 // }
 // 2.28. Саставити програм који учитава вредност производа у динарима, а затим израчунава и
 // приказује колико је потребно новчаница од 500 дин., 100 дин. и 1 дин. за плаћање тог производа.
+// {
+//     int cena,petsto,sto,dinar;
+//     printf("Unesite cenu artikla:");
+//     scanf("%d",&cena);
+//     petsto = cena/500;
+//     sto = (cena%500)/100;
+//     dinar = (cena%500)%100;
+//     printf("\nPotrebno je :\n %d od 500 \n %d od 100 \n %d od po jedan dinar.",petsto,sto,dinar);
+//     return 0;
+// }
+// 2.29. Саставити програм који за унети временски интервал у секундама и исписује га у облику
+// дани : часови : минуте : секунде.
 {
-    int cena,petsto,sto,dinar;
-    printf("Unesite cenu artikla:");
-    scanf("%d",&cena);
-    petsto = cena/500;
-    sto = (cena%500)/100;
-    dinar = (cena%500)%100;
-    printf("\nPotrebno je :\n %d od 500 \n %d od 100 \n %d od po jedan dinar.",petsto,sto,dinar);
+    int sekunde,sec,dan,sat,minut;
+    printf("Unesite interval u sekundama:");
+    scanf("%d",&sekunde);
+    sec=sekunde%60;
+    minut=sekunde/60;
+    sat=minut/60;
+    minut=minut%60;
+    dan=sat/60;
+    sat=sat%60;
+    printf("\nIma:%d dana\n,%d sati,\n %d minuta,\n %d sekundi.");    
     return 0;
 }
