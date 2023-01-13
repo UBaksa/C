@@ -175,16 +175,85 @@ main()
 // }
 // 2.29. Саставити програм који за унети временски интервал у секундама и исписује га у облику
 // дани : часови : минуте : секунде.
-{
-    int sekunde,sec,dan,sat,minut;
-    printf("Unesite interval u sekundama:");
-    scanf("%d",&sekunde);
-    sec=sekunde%60;
-    minut=sekunde/60;
-    sat=minut/60;
-    minut=minut%60;
-    dan=sat/60;
-    sat=sat%60;
-    printf("\nIma:%d dana\n,%d sati,\n %d minuta,\n %d sekundi.");    
-    return 0;
-}
+// {
+//     int sekunde,sec,dan,sat,minut;
+//     printf("Unesite interval u sekundama:");
+//     scanf("%d",&sekunde);
+//     sec=sekunde%60;
+//     minut=sekunde/60;
+//     sat=minut/60;
+//     minut=minut%60;
+//     dan=sat/60;
+//     sat=sat%60;
+//     printf("\nIma:%d dana\n,%d sati,\n %d minuta,\n %d sekundi.");    
+//     return 0;
+// }
+// 3.1. Саставити програм који исписује обавештење да ли је унети цео број паран или непаран.
+// {
+//     int a;
+//     printf("Unesite broj a");
+//     scanf("%d",&a);
+//     if(a%2 == 0){
+        // printf("Broj je paran.");
+//     }
+//     else{
+//         printf("Broj je neparan");
+//     }
+//     return 0;
+// }
+// 3.4. Саставити програм који за три унета цела броја исписује највећи.
+// {
+//     int a,b,c,max;
+//     printf("Unesite a,b,c brojeve ovim redosledom.");
+//     scanf("%d %d %d",&a,&b,&c);
+//     max = a;
+//     if(b>max){
+//         max=b;
+//     }
+//     if(c>max){
+//         max=b;
+//     }
+//     printf("Najveci je %d broj.",max);
+//     return 0;
+// }
+// 3.5. Саставити програм који три унета реална броја уређује у неопадајућем редоследу.
+// {
+//     float a,b,c;
+//     printf("Unesite tri broja:");
+//     scanf("%f %f %f",&a,&b,&c);
+//     if(a > b && a > c && b > c){
+//         printf("%.2f %.2f %.2f",a,b,c);
+//     }
+//     else if(a > b && a > c && c > b){
+//         printf("%.2f %.2f %.2f",a,c,b);
+//     }
+//     else if(b > a && b > c && a > c){
+//         printf("%.2f %.2f %.2f",b,a,c);
+//     }
+//     else if(b > a && b > c && c > a){
+//         printf("%.2f %.2f %.2f",b,c,a);
+//     }
+//     else if(c > a && c > b && a > b){
+//         printf("%.2f %.2f %.2f",c,a,b);
+//     }
+//     else if(c > a && c > b && b > a){
+//         printf("%.2f %.2f %.2f",c,b,a);
+//     }
+// return 0;
+// }
+// 3.8. Саставити програм који ће за унети опсег позитивних целих бројева од а до b исписати да ли
+// се у задатом опсегу налази квадрат броја х (број х се уноси са тастатуре).
+// {
+//     int a,b,x;
+//     printf("Unesite brojeve obseg a i b");
+//     scanf("%d %d",&a,&b);
+//     printf("Unesite broj x");
+//     scanf("%d",&x);
+//     if((a < x*x) && (b> x*x)){
+//         printf("Kvadrat broja x se nalazi u domenu od a do b");
+//     }
+//     else{
+//         printf("Kvadrat broja x se ne nalazi u domenu od a do b.");
+//     }
+//     return 0;
+// }
