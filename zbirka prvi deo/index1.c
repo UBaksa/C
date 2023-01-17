@@ -257,3 +257,91 @@ main()
 //     }
 //     return 0;
 // }
+// 4.5. Саставити програм који за унето n учитава n реалних бројева и приказује њихов збир и
+// аритметичку средину.
+// {
+//         int n,i;
+//         float s,broj,ars;
+//         s=0;
+//         printf("Unesite broj n koliko brojeva ce biti uneto.");
+//         scanf("%d",&n);
+//         for(i=1;i<=n;i++){
+//                 scanf("%f",&broj);
+//                 s+=broj;
+//         }
+//         ars=s/n;
+//         printf("Suma svih unetih brojeva je %.2f.",s);
+//         printf("Aritmeticka sredina unetih brojeva je %.2f",ars);
+//         return 0;
+// }
+// 4.6. Саставити програм који за унети цео број n приказује његов факторијел.
+// {
+//         int i,n;
+//         long faktorijel=1;
+//         printf("Unesite broj n");
+//         scanf("%d",&n);
+//         for(i=1;i<=n;i++){
+//                 faktorijel=faktorijel*i;
+//         }
+//         printf("Faktorijel unetog broja n je %ld",faktorijel);
+//         return 0;
+// }
+// // 4.7. Саставити програм којим се за унети природан број n израчунава суму: S =1!+2!+3!+...+n!.
+// {
+//         int i,n,s=0;
+//         long fakt=15
+//         ;
+//         printf("Unesite broj n do kojeg ce ici suma faktorijala;");
+//         scanf("%d",&n);
+//         for(i=1;i<=n;i++){
+//                 fakt=fakt*i;
+//                 s+=fakt;
+//         }
+//         printf("Suma faktorijala koja ide do broja n iznosi: %d",s);
+//         return 0;
+// }
+// 4.12. Саставити програм који ће учитати n реалних бројева и исписати највећи.
+// {
+//         int i, n;
+// float br, max;
+// printf("\nn= ");
+// scanf("%d",&n);
+// printf("\nUnesite 1. broj: ");
+// scanf("%f",&br);
+// max=br;
+// for(i=2; i<=n; i++)
+// {
+// printf("Unesite %d. broj: ",i);
+// scanf("%f",&br);
+// if(br>max) max=br;
+// }
+// printf("\nNajveci: %.2f", max);
+// return 0;
+// }
+// 4.13. Саставити програм који ће исписати све бројева прве стотине који су дељиви са 6 и њихову
+// суму.
+// {
+//         int i,s=0;
+//         for(i=1;i<=100;i++){
+//                 if(i%6 == 0){
+//                         s+=i;
+//                 }        
+//         }
+//         printf("Suma brojeva deljivis sa 6 je %d",s);
+//         return 0;
+// }
+// 4.14. Саставити програм који исписује све троцифрене бројеве код којих је друга цифра за 2 већа
+// од прве, а трећа за 1 већа од друге.
+// {
+//         int a,b,c;
+//         for(a=1;a<=9;a++){
+//                 for(b=0;b<=9;b++){
+//                         for(c=0;c<=9;c++){
+//                                 if(b == 2+a && c == 1+b){
+//                                         printf("\n%d%d%d",a,b,c);
+//                                 }
+//                         }
+//                 }
+//         }
+//         return 0;
+// }
