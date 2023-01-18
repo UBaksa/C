@@ -400,3 +400,115 @@ main()
 //         printf("\nTih brojeva ima %d",s);
 //         return 0;
 // }
+// 4.19. Саставити програм који ће исписати све делиоце унетог броја n.
+// {
+//         int i,n;
+//         printf("Unesite broj koji zelite proveriti njegove delioce");
+//         scanf("%d",&n);
+//         for(i=1;i<=n;i++){
+//                 if(n%i == 0){
+//                         printf("\n%d",i);
+//                 }
+//         }
+// }
+// 4.20. Саставити програм који ће исписати обавештење да ли је унети број n савршен. Број је
+// савршен ако је једнак суми својих делиоца искључујући њега самог. На пример, 28=1+2+4+7+14.
+// {
+//         int n,s=0,i;
+//         printf("Unesite broj koji zelite proveriti je li savrsen.");
+//         scanf("%d",&n);
+//         for(i=1;i<=n;i++){
+//                 if(n%i == 0){
+//                         s+=i;
+//                 }
+//         }
+//         if(n  == (s-n)){
+//                 printf("Broj je savrsen.");
+//         }
+//         else{
+//                 printf("Broj nije savrsen.");
+//         }
+//         return 0;
+// }
+// 5.3. Саставити програм за исписивање суме природних бројева од 1 до n. Број n се уноси са
+// тастатуре.
+// {
+//         int i,n,s=0;
+//         printf("Unesite n");
+//         scanf("%d",&n);
+//         i=1;
+//         while(i<=n){
+//                 s+=i;
+//                 i++;
+//         }
+//         printf("Suma iznosi %d",s);
+//         return 0;
+// }
+// 5.4. Саставити програм за исписивање суме сваког трећег природног броја од 1 до n. Број n се
+// уноси са тастатуре.
+// {
+//         int i,n,s=0;
+//         printf("Unesite n");
+//         scanf("%d",&n);
+//         i=1;
+//         while(i<=n){
+//                 s+=i;
+//                 i=i+3;
+//         }
+//         printf("Suma svakog treceg iznosi %d",s);
+//         return 0;
+// }
+// 5.6. Саставити програм за израчунавање суме s квадрата парних и кубова непарних природних
+// бројева од n до m (n<m).
+// {
+//         int i,n,m,s=0;
+//         printf("Unesite n;");
+//         scanf("%d",&n);
+//         printf("Unesite m;");
+//         scanf("%d",&m);
+//         while(i<=m){
+//                 if(i%2==0){
+//                         s+=pow(i,2);
+//                 }
+//                 else{
+//                         s+=pow(i,3);
+//                 }
+//                 i++;
+//         }
+//         printf("Suma iznosi %d",s);
+//         return 0;
+// }
+// 5.7. Саставити програм којим се:
+// а) исписује n елемената Фибоначијевог низа;
+// б) израчунава и исписује сума првих n елемената Фибоначијевог низа.
+// Фибоначијев низ: f1=1, f2=1, fi=fi-1+fi-2, i=3, 4, 5, ...
+// {
+//         int i,n,fp=1,fpp=1,fn;
+//         printf("Unesite koliko zelite n elemenata fib niza.");
+//         scanf("%d",&n);
+//         printf("%d %d",fp,fpp);
+//         while(i<=n){
+//                 fn=fp+fpp;
+//                 fpp=fp;
+//                 fp=fn;
+//                 printf("\n%d",fn);
+//                 i++;
+//         }
+//         return 0;
+// }
+{
+//         int i=3,n,fp=1,fpp=1,s=2,fn;
+//         printf("Unesite n");
+//         scanf("%d",&n);
+//         printf("%d\n%d",fp,fpp);
+//         while(i<=n){
+//                 fn=fp+fpp;
+//                 s+=fn;
+//                 fpp=fp;
+//                 fp=fn;
+//                 i++;
+//         }
+//         printf("Suma iznosi %d",s);
+//         return 0;
+// }
+// KOD FIBONACIJEVOG I KRECE OD 3!!!!!!!!!
