@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <math.h>
+#define STOP 0
 
 // main()
 // {
@@ -12,7 +13,6 @@
 //     return 0;
 // }
 // 2.14. Саставити програм којим се замењују вредности два унета цела броја.
-main()
 // {
 //     int a,b,p;
 //     printf("Unesite prvi broj:");
@@ -496,7 +496,7 @@ main()
 //         }
 //         return 0;
 // }
-{
+// {
 //         int i=3,n,fp=1,fpp=1,s=2,fn;
 //         printf("Unesite n");
 //         scanf("%d",&n);
@@ -512,3 +512,103 @@ main()
 //         return 0;
 // }
 // KOD FIBONACIJEVOG I KRECE OD 3!!!!!!!!!
+// 5.8. Саставити програм за исписивање n-тог степена броја а. Оба броја се уносе са тастатуре.
+// {
+//         int a,n=1,i;
+//         printf("Unesite broj a;");
+//         scanf("%d",&a);
+//         printf("Unesite stepen broja a;");
+//         scanf("%d",&n);
+//         i=1;
+//         (while i<=n){
+//                 n=n*a;
+//                 i++
+//         }
+//         printf("Stepenovan broj iznosi ")
+// // }
+// 5.9. Саставити програм за израчунавање средње вредности унетих реалних бројева. Користити
+// број 0 као STOP кôд за крај учитавања.
+main()
+// {
+// int n=0;
+// float x,s=0;
+// printf("Unesite niz realnih brojeva sve do 0");
+// scanf("%f",&x);
+// while(x!=STOP){
+//         s+=x;
+//         n++;
+//         scanf("%f",&x);
+// }
+// if(n==0){
+//         printf("Morate zadati neki niz!");
+// }
+// else{
+//         printf("Ar sredina iznosi %.2f",s/n);
+// }
+// return 0;
+// }
+// 5.10. Саставити програм који ће учитавати један за другим низ бројева. Крај уноса означен је
+// нулом. Наћи и исписати аритметичку средину учитаних бројева узимајући у обзир само оне бројеве
+// који су већи или једнаки 2 и мањи или једнаки 6.
+// {
+//         int i=0;
+//         float x,s=0,n=0;
+//         printf("Unesite neke brojeve");
+//         scanf("%f",&x);
+//         while(x!=STOP){
+//                 if( x >= 2 || x <= 6){
+//                         s+=x;
+//                         n++;
+//                 }
+//                 i++;
+//         }
+//         printf("Ar sredina brojeva iznosi %.2f",s/n);
+//         return 0;
+// }bolje kako su oni uradili u zbirci.
+// 5.12. Саставити програм који ће учитати два броја m и n. Оба броја треба да буду природна. Ако
+// тај услов није испињен, учитавање треба поновити. Ако је n<m, заменити m са n. Наћи и исписати
+// суму квадратних корена свих непарних бројева од m до n.
+// {
+//         int i,m,n,pomocna;
+//         float suma=0,koren;
+//         printf("Unesite m i n");
+//         while(m<1 || n<1){
+//                 scanf("%d %d",&m,&n);
+//         }
+//         if(n<m){
+//                 m=pomocna;
+//                 n=m;
+//                 pomocna=n;
+//         }
+// }
+// 5.17. Саставити програм којим се исписује највећи заједнички делилац (NZD) бројева a и b
+// помоћу Еуклидовог алгоритма:
+// - ако је a=b, тада је NZD=a и то је крај алгоритма;
+// - ако је а≠b, тада од већег броја одузимамо мањи и враћамо се на први корак.
+// {
+//         int a,b;
+//         printf("Unesite a;");
+//         scanf("\n%d",&a);
+//         printf("\nUnesite b;");
+//         scanf("\n%d",&b);
+//         if(a=b)
+// }
+// 5.18. Саставити програм који испитује да ли је унети број Нивенов. Нивенов број је број који је
+// дељив са сумом својих цифара.//// FINTA ZA IZVLACENJE SVAKE CIFRE PONAOSOB!!!!!!
+// {
+//         int n, k, suma=0;
+// printf(" n= ");
+// scanf("%d", &n);
+// k=n;
+// while(k > 0)
+// {
+// suma+=k%10;
+// k /= 10;
+// }
+// if(k%suma==0)
+// printf("\n Broj %d jeste Nivenov\n", n);
+// else
+// printf("\n Broj %d nije Nivenov\n", n);
+// return 0;
+// }
+
