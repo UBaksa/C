@@ -683,3 +683,106 @@ main()
 // }
 // 7.7. Саставити програм који ће исписати све просте бројеве од 1 до 100. Број је прост ако је
 // дељив само са 1 и самим собом.
+// {
+// int i,j,m;
+// float x;
+// for(i=1; i<=100; i=i+1)
+// {
+// x=i;
+// m=sqrt(x);
+// for(j=2; j<=m; j++)
+// if(i%j==0) break;
+// if(i==2 || i%j!=0)
+// printf(" %2d",i);
+// }
+// getche();
+// return 0;
+// }
+// 7.9. Саставити програм користећи наредбу continue који ће исписати парне бројеве прве
+// десетице.
+
+// {
+//         int i;
+//         for(i=1;i<10;i++){
+//                 if((i%2) != 0){
+//                         continue;
+//                 }
+//                 else{
+//                         printf("\n%d",i);
+//                 }
+//         }
+//         return 0;
+// }
+// 7.11. Саставити програм који исписује све бројеве мање од 20 који нису дељиви са бројем 3.
+// {
+//         int i;
+//         for(i=1;i<20;i++){
+//                 if(i%3==0){
+//                         continue;
+//                 }
+//                 else{
+//                         printf("\n%d",i);
+//                 }
+//         }
+//         return 0;
+// }
+// 7.19. Саставити програм који за унету редни број од 1 до 7 исписати одговрајући дан у недељи.
+// {
+//         int x;
+//         printf("Unesite x");
+//         scanf("%d",&x);
+//         switch (x)
+//         {
+//                 case 1:
+//                 printf("\nPonedeljak");
+//                 break;
+        
+//         case 2:
+//         printf("\nUtorak");
+//         break;
+//         case 3:
+//         printf("\nSreda");
+//         break;
+//         case 4:
+//         printf("\nCetvrtak");
+//         break;
+//         case 5:
+//         printf("\nPetak");
+//         break;
+//         case 6:
+//         printf("\nSubota");
+//         break;
+//         case 7:
+//         printf("\nNedelja");
+//         break;
+//         default:
+//         printf("\nGreska!");
+//         break;
+// }
+// return 0;
+// }
+// 7.20. Саставити програм који исписује на екрану да ли је унето слова самогласник или сугласник.
+// {
+//         char x;
+//         printf("Unesite slovo:");
+//         scanf("%c",&x);
+//         switch (x)
+//         {
+//                 case 'a':
+//                 case 'e':
+//                 case 'i':
+//                 case 'o':
+//                 case 'u':
+//                 case 'A':
+//                 case 'E':
+//                 case 'I':
+//                 case 'O':
+//                 case 'U':
+//                 printf("%c je Samoglasnik",x);
+//                 break;
+//         default:
+//         printf("%c je suglasnik",x);
+//                 break;
+//         }
+//         return 0;
+// }
