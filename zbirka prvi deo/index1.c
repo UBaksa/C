@@ -786,3 +786,87 @@ main()
 //         }
 //         return 0;
 // }
+// 7.22. Саставити програм који за унети знак операције (+, -, *, /) и два реална операнда исписује
+// резултат операција.
+
+// {
+//         float a,b;
+//         char znak;
+//         printf("Znak:");
+//         scanf("%c",&znak);
+//         printf("Prvi element");
+//         scanf("%f",&a);
+//         printf("Drugi element");
+//         scanf("%f",&b);
+//         switch (znak)
+//         {
+//                 case '+':
+//                 printf("%.2f",a + b);
+//                 break;
+//                 case '-':
+//                 printf("%.2f",a - b);
+//                 break;
+//                 case '*':
+//                 printf("%.2f",a * b);
+//                 break;
+//                 case '/':
+//                 if(b == 0){
+//                         printf("Greska,ne sme se deliti nulom!");
+//                 }
+//                 else{
+//                 printf("%.2f",a / b);
+//                 }
+//                 break;
+//         default:
+//         printf("Unesite odgovarajuci znak za operaciju!");
+//                 break;
+//         }
+//         return 0;
+// }
+// 7.23. Саставити програм који ће учитати дужине страница правоугаоника, а затим на основу
+// избора опција, рачуна и исписује обим O = 2(a + b) , површину P = ab или дужину дијагонале
+// d = a2 + b2 тог правоугаоника.
+// {
+//         int i;
+//         float a,b,O,d;
+//         printf("Unesite a:");
+//         scanf("%f",&a);
+//         printf("\nUnesite b:");
+//         scanf("%f",&b);
+//         if(a>0 && b>0){
+//                 printf("\nIzaberite koju opciju zelite da izracunate:");
+//                 printf("\n1.Povrsina,2.Obim.3.dijagonala pravougaonika.");
+//                 scanf("%d",i);
+//                 switch(i){
+//                         case 1:
+//                         printf("Povrsina pravouganika iznosi %.2f",a * b);
+//                         break;
+//                         case 2:
+//                         O=2*(a+b);
+//                         printf("Obim iznosi %.2f",O);
+//                         break;
+//                         case 3:
+//                         d=sqrt(pow(a,2)+pow(b,2));
+//                         printf("Dijagonala iznosi %.2f",d);
+//                         break;
+//                         default:
+//                         printf("Izabrali ste pogresan broj!");
+//                         break;
+//                 }
+//         }
+//         else{
+//                 printf("Ne mozete formirati pravouganik sa ovim stranicama!");
+//         }
+//         return 0;
+// }
+// 9.1. Саставити функцију која врши сабирање два цела броја, а затим саставити програм који
+// тестира функцију и исписује резултат.
+{
+        int zbir(int a,int b){
+                int rezultat;
+                rezultat=a+b;
+                return rezultat;
+        }
+
+}
+
