@@ -170,22 +170,72 @@
 //         }
 //         printf("\nNZD za date brojeve je %d",a);
 //     return 0;
-// }5.17
+// // }5.17
 
-main(){
-int n, k, suma=0;
- printf(" n= ");
- scanf("%d", &n);
- k=n;
- while(k > 0)
- {
- suma+=k%10;
- k /= 10;
- }
- if(k%suma==0)
- printf("\n Broj %d jeste Nivenov\n", n);
- else
- printf("\n Broj %d nije Nivenov\n", n);
- getche();
- return 0;
-}
+// main(){
+// int n, k, suma=0;
+//  printf(" n= ");
+//  scanf("%d", &n);
+//  k=n;
+//  while(k > 0)
+//  {
+//  suma+=k%10;
+//  k /= 10;
+//  }
+//  if(k%suma==0)
+//  printf("\n Broj %d jeste Nivenov\n", n);
+//  else
+//  printf("\n Broj %d nije Nivenov\n", n);
+//  getche();
+//  return 0;
+// }
+
+// long faktorijel(int n){
+//     int i,fakt=1;
+//     for(i=1;i<=n;i++){
+//         fakt*=i;
+//     }
+//     return fakt;
+// }
+
+// main(){
+//     int a,b,c,broj;
+//     for(a=1;a<=9;a++){
+//         for(b=0;b<=9;b++){
+//             for(c=0;c<=9;c++){
+//                 broj=100*a + 10*b + c;
+//                 if(broj == faktorijel(a)+faktorijel(b)+faktorijel(c)){
+//                     printf("\n%d",broj);
+//                 }
+//             }
+//         }
+//     }
+//     return 0;
+// }
+// 9.15. Саставити програм који исписује све просте бројеве мање од 500. Користити функцију за
+
+
+// int prostBroj(int broj){
+//     int i;
+//     for(i=2;i<broj;i++){
+//         if(broj%i == 0){
+//             return 0;
+//         }
+//         else{
+//             return 1;
+//         }
+//     }
+// }
+
+// main(){
+//     int i;
+//     for(i=1;i<=500;i++){
+//         if(prostBroj(i) == 1){
+//             printf("%d je taj broj\n",i);
+//         }
+//         else{
+//             continue;
+//         }
+//     }
+//     return 0;
+// }
