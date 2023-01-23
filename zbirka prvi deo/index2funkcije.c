@@ -217,20 +217,115 @@
 
 // 9.11. Саставити програм који за дато n рачуна и исписује суму S = 1! + 2! + 3! + ... + n!. За
 // рачунање факторијела користити одговарајућу функцију.
-long faktorijal(int n){
-    int i,fakt=1;
-    for(i=1;i<=n;i++){
-        fakt*=i;
-    }
-    return fakt;
-}
-main(){
-    int n,s=0,i;
-    printf("Unesite n");
-    scanf("%d",&n);
-    for(i=1;i<=n;i++){
-        s+=faktorijal(i);
-    }
-    printf("Suma iznosi %d",s);
-    return 0;
-}
+// long faktorijal(int n){
+//     int i,fakt=1;
+//     for(i=1;i<=n;i++){
+//         fakt*=i;
+//     }
+//     return fakt;
+// }
+// main(){
+//     int n,s=0,i;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     for(i=1;i<=n;i++){
+//         s+=faktorijal(i);
+//     }
+//     printf("Suma iznosi %d",s);
+//     return 0;
+// }
+
+// main(){
+//     int a,b,c,broj;
+//     for(a=1;a<=9;a++){
+//         for(b=0;b<=9;b++){
+//             for(c=0;c<=9;c++){
+//                 broj=100*a + 10*b + c;
+//                 if(broj == faktorijel(a)+faktorijel(b)+faktorijel(c)){
+//                     printf("\n%d",broj);
+//                 }
+//             }
+//         }
+//     }
+//     return 0;
+// }
+// 9.15. Саставити програм који исписује све просте бројеве мање од 500. Користити функцију за
+
+
+// int prostBroj(int broj){
+//     int i;
+//     for(i=2;i<broj;i++){
+//         if(broj%i == 0){
+//             return 0;
+//         }
+//         else{
+//             return 1;
+//         }
+//     }
+// }
+
+// main(){
+//     int i;
+//     for(i=1;i<=500;i++){
+//         if(prostBroj(i) == 1){
+//             printf("%d je taj broj\n",i);
+//         }
+//         else{
+//             continue;
+//         }
+//     }
+//     return 0;
+// }
+// 9.17. Саставити програм којим се исписују сви троцифрени Амстронгови бројеви. Троцифрени
+// број је Амстронгов ако је једнак суми кубова својих цифара. Формирати две функције, једна за
+// рачунање суме кубова, а друга за одређивање да ли је дати број Амстронгов (ако јесте враћа 1, ако
+// није враћа 0).
+
+// int kub(int n){
+//     return n*n*n;
+// }
+
+// main(){
+//     int a,b,c,broj;
+//     for(a=1;a<=9;a++){
+//         for(b=0;b<=9;b++){
+//             for(c=0;c<=9;c++){
+//                 broj=100*a + 10*b + c;
+//                 if(broj == (kub(a)+kub(b)+kub(c))){
+//                     printf("\n%d je Amstrongov broj",broj);
+//                 }
+//             }
+//         }
+//     }
+//     return 0;
+// }
+// 9.18. Саставити програм којим се исписују сви Нивенови бројеви друге стотице. Нивенов број је
+// број који је дељив са сумом својих цифара. Формирати две функције, једна за рачунање суме цифара,
+// а друга за одређивање да ли је дати број Нивенов (ако јесте враћа 1, ако није враћа 0).
+
+// int sumacifara(int broj){
+//     int suma=0;
+//     while(broj>0){
+//         suma=suma+broj%10;
+//         broj=broj/10;
+//     }
+//     return suma;
+// }
+// int Nivenov(int broj){
+//     if(broj % sumacifara(broj) == 0){
+//         return 1;
+//     }
+//     else{
+//         return 0;
+//     }
+// }
+
+// main(){
+//     int i;
+//     for(i=100;i<=200;i++){
+//         if(Nivenov(i)){
+//             printf("\n%d Ovaj broj je nivenov!",i);
+//         }
+//     }   
+//     return 0;
+// }
