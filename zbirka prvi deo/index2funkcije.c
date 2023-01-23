@@ -329,3 +329,63 @@
 //     }   
 //     return 0;
 // }
+// 9.29. Саставити рекурзивну функцију за одређивање факторијела целог броја, а затим је тестирати
+// у главном програму за унети цео број n и исписати добијени резултат.
+// int faktorijel(int n){
+//     if(n == 1) return 1;
+//     else return n*faktorijel(n-1);
+// }
+
+// main(){
+//     int n;
+//     printf("unesite n:");
+//     scanf("%d",&n);
+//     printf("\nFaktorijel od n iznosi %d",faktorijel(n));
+//     return 0;
+// }
+// 9.30. Саставити рекурзивну функцију која степеновање целог броја на целобројни изложилац, а
+// затим тестирати функцију за дати природни број и изложилац и исписати добијени резултат.
+
+// int stepen(int a,int s){
+//     if(s == 0)return 1;
+//     else return a*stepen(a,s-1);
+// // }
+// rekurzivna furka za stepen mnogo jaka!!!!!
+// main(){
+//     int o,s;
+//     printf("Unesite osnovu:");
+//     scanf("%d",&o);
+//     printf("Unesite stepen:");
+//     scanf("%d",&s);
+//     printf("\nOsnova na broj iznosi %d",stepen(o,s));
+//     return 0;
+// }
+// int sabiranje(int n){
+//     if(n == 0) return 0;
+//     else return (n+sabiranje(n-1));
+// }
+
+// main(){
+//     int n,s=0;
+//     printf("Unesite granica koje ce brojeve da sabira:");
+//     scanf("%d",&n);
+//     s=sabiranje(n);
+//     printf("Suma prvih brojeva do n iznosi %d",s);
+//     return 0;
+// }
+// 9.32. Саставити рекурзивну функцију која исписује првих n бројева у обрнутом редолседу, а затим
+// тестирати функцију за дато n.
+
+// void ispis(int n){
+//     if(n == 0) return;
+//     else printf(" %d",n);
+//     ispis(n-1);
+// }
+
+// main(){
+//     int n;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     ispis(n);
+//     return 0;
+// }
