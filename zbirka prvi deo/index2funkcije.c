@@ -389,3 +389,178 @@
 //     ispis(n);
 //     return 0;
 // }
+
+// NIZOVI //
+
+// 10.4. Саставити програм који ће учитати низ од n елемената и исписати их оним редоследом којим
+// су учитани.
+// #define MAX 100
+
+// main(){
+//     int i,n,niz[MAX];
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("\nUnesite %d elemenata:",n);
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     printf("Niz ima elemente:");
+//     for(i=0;i<n;i++){
+//         printf("%d",niz[i]);
+//     }
+//     return 0;
+// }
+// 10.5. Саставити програм који ће учитати низ од n елемената и исписати их обрнутим редоследом.
+
+// #define MAX 100
+// main(){
+//     int niz[MAX],i,n;
+//     printf("Unesite n:");
+//     scanf("%d",&n);
+//     printf("Unesite neke elemente niza:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     printf("Niz u obrnutom redosledu:");
+//  //ovde je caka za obrnut redosled!  for(i=n-1;i>=0;i--){
+//         printf("%d",niz[i]);
+//     }
+//     return 0;
+// }
+// 10.7. Саставити програм за израчунавање и исписивање аритметичке средине задатог низа (дужине
+// n) целих бројева.
+// #define MAX 100
+
+// main(){
+//     int niz[MAX],n,i,s=0;
+//     printf("Unesite n:");
+//     scanf("%d",&n);
+//     printf("Unesite neke elemente niza:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//         s+=niz[i];
+//     }
+//     printf("\nElementi niza:");
+//     for(i=0;i<n;i++){
+//         printf(" %d",niz[i]);
+//     }
+//     printf("\nAritmeticka sredina ovog niza iznosi %.2f",(float)s/n);
+//     return 0;
+// }
+// 10.8. Саставити програм који за унети низ (дужине n) целих бројева израчунава и исписуеј
+// аритметичку средину оних елемената низа који су дељиви са 3.
+#define MAX 100
+
+// main(){
+//     int niz[MAX],i,s=0,br=0,n;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Unesite %d elemenata",n);
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//         if(niz[i]%3 == 0){
+//             s+=niz[i];
+//             br++;
+//         }
+//     }
+//     printf("Aritmeticka sredina niza brojeva koji su deljivi sa dva je %.2f",(float)s/br);
+//     return 0;
+// }
+
+// 10.9. Саставити програм који ће за унети низ (дужине n) целих бројева одредити и исписати:
+// а) суму парних и суму непарних бројева;
+// // б) суму елемената са парним индексима и суму елемената са непарним индексима.
+// a)
+// main(){
+//     int niz[MAX],n,i,sp=0,sn=0;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Elementi niza:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",niz[i]);
+//         if(niz[i]%2 == 0){
+//             sp+=niz[i];
+//         }
+//         else{
+//             sn+=niz[i];
+//         }
+//     }
+//     printf("\nSuma parnih %d",sp);
+//     printf("\nSuma neparnih %d",sn);
+//     return 0;
+// }
+// ovo je za broj,kao element niza,a ako se trazi index-pozicija elementa u if se radi sve bez niz[i],nego samo i!!!
+// 10.10. Саставити програм који прочита два низа, дужине n, са реалним компонентама,
+// A = ( A1, A2 ,..., An ) и ( ) 1 2 , ,..., n B = B B B израчунава њихов скаларни производ
+// 1
+// 0
+// n
+// i i
+// i
+// s A B
+// -
+// =
+// =Σ и
+// исписује добијени резултат.
+// main(){
+//     int a[MAX],b[MAX],i,n,s=0;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Unesite elemente:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&a[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         scanf("%d",&b[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         s+=a[i]*b[i];
+//     }
+//     printf("Skalarni proizvod dva niza iznosi %d",s);
+//     return 0;
+// }
+// 10.11. Саставити програм који учита елементе низа A = ( A1, A2 ,..., An ) дужине n и низа
+// ( ) 1 2 , ,..., m B = B B B дужине m и спаја у један низ ( ) 1 2 1 2 , ,..., , , ,..., n m C = A A A B B B дужине n+m.
+// Исписати новокреирани низ.
+// main(){
+//     int a[MAX],b[MAX],c[MAX],i,n,m;
+//     printf("Unesite n za niz a");
+//     scanf("%d",&n);
+//     printf("\nElementi niza a: ");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&a[i]);
+//     }
+//     printf("Unesite m za niz b");
+//     scanf("%d",&m);
+//     printf("\nElementi niza b: ");
+//     for(i=0;i<m;i++){
+//         scanf("%d",&b[i]);
+//     }
+//     for(i=0;i<(m+n);i++){
+//         if(i<n) c[i]=a[i];
+//         else c[i]=b[i-n];//ova dva su uslova da ide redom,koji niz ima vise elemenata njega prvog ispisuje!!!!
+//         printf("\t%d",c[i]);
+//     }
+//     return 0;
+// }
+// 10.12. Саставити програм који учита елементе два низа низа дужине n A = ( A1, A2 ,..., An ) и
+// ( ) 1 2 , ,..., n B = B B B и формира и исписује нови низ чији су елементи
+// ( ) 1 1 2 2 , ,..., n n C = A + B A + B A + B .
+// main(){
+//     int a[MAX],b[MAX],c[MAX],i,n;
+//     printf("Unesite n za niz a");
+//     scanf("%d",&n);
+//     printf("\nElementi niza a: ");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&a[i]);
+//     }
+//     printf("\nElementi niza b: ");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&b[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         c[i]=a[i]+b[i];
+//         printf("%d ",c[i]);
+//     }
+//     return 0;
+//     }
