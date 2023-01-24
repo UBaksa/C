@@ -583,3 +583,180 @@
 //     }
 //     return 0;
 // }
+// 10.15. Саставити програм који учита елементе низа A = ( A1, A2 ,..., An ) дужине n и низа
+// ( ) 1 2 , ,..., m B = B B B дужине m, а затим формира и исписује низ С који се састоји од парних елемената
+// низа А и низа В.
+// #define MAX 100 
+
+// main(){
+//     int k=0,n,m,i,b[MAX],a[MAX],c[MAX];
+//     printf("Unesite n za a niz");
+//     scanf("%d",&n);
+//     for(i=0;i<n;i++){
+//         scanf("%d",&a[i]);
+//     }
+//     printf("Unesite m za b niz");
+//     scanf("%d",&m);
+//     for(i=0;i<m;i++){
+//         scanf("%d",&b[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         if(a[i]%2 ==0){
+//             printf("%d",a[i]);
+//             c[k]=a[i];
+//             k++;
+//         }
+//     }
+//     for(i=0;i<m;i++){
+//         if(b[i]%2 ==0){
+//             printf("%d",b[i]);
+//             c[k]=b[i];
+//             k++;
+//         }
+//     }
+//     for(i=0;i<k;i++){
+//         printf("%d ",c[i]);
+//     }
+//     return 0;
+// }
+// 10.16. Саставити програм који ће учитати два низа целих бројева А и В једнаких дужина n и на
+// основу њих формирати низ С тако да i-ти елемент низа С буде једнак мањем од i-тих елемената низа
+// А и В. Ако су i-ти елементи низа А и В једнаки онда i-ти елемент низа С треба да добије вредност
+// нула. Исписати низ С.
+// #define MAX 100
+// main(){
+//     int i,n,a[MAX],b[MAX],c[MAX];
+//     printf("Unesite n:");
+//     scanf("%d",&n);
+//     printf("Elementi niza a:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&a[i]);
+//     }
+//     printf("Elementi niza b:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&b[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         if(a[i] == b[i]){
+//             c[i]=0;
+//         }
+//         else if(a[i] > b[i]){
+//             c[i]=b[i];
+//         }
+//         else{
+//             c[i]=a[i];
+//         }
+//         printf("%d ",c[i]);
+//     }
+//     return 0;
+// }
+// #define MAX 100
+// main(){
+//     int i,n,a[MAX],b[MAX],c[MAX],m=0,j=0;
+//     printf("Unesite n:");
+//     scanf("%d",&n);
+//     printf("Elementi niza a su:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&a[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         if(a[i] >= 0){
+//             c[j]=a[i];
+//             j++;
+//         }
+//         else{
+//             b[m]=a[i];
+//             m++;
+//         }
+//     }
+//     printf("Elementi niza C su:");
+//     for(i=0;i<j;i++){
+//         printf("%d ",c[i]);
+//     }
+//     printf("Elementi niza B su:");
+//     for(i=0;i<m;i++){
+//         printf("%d ",b[i]);
+//     }
+//     return 0;
+// }
+// 10.18. Саставити програм који за унети низ реланих бројева А дужине n формира и исписује нови
+// низ В кога чине елементи низа А који су већи од аритемтичке средине свих елемената низа А.
+// #define MAX 100
+
+// main(){
+//     int b[MAX],a[MAX],i,n,k=0,s=0;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Elementi niza A");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&a[i]);
+//         s+=a[i];
+//     }
+//     for(i=0;i<n;i++){
+//         if(a[i] > (s/n)){
+//             b[k]=a[i];
+//             k++;
+//         }
+//     }
+//     printf("\nNiz b");
+//     for(i=0;i<k;i++){
+//         printf("%d ",b[i]);
+//     }
+//     return 0;
+// }
+// 10.19. Саставити програм који за унети низ целих бројева А, дужине n, формира и исписује нови
+// низ В чији се елементи формирају по следећем принципу: В0=А0, В1=А0+А1, В2=А0+А1+А2, ...,
+// Bi=A0+A1+A2+...+Ai.
+// #define MAX 100
+// main(){
+//     int i,n,a[MAX],b[MAX],s=0;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("\nElementi niza a");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&a[i]);
+//     }
+//     printf("\nNiz b:");
+//     for(i=0;i<n;i++){
+//         s+=a[i];
+//         b[i]=s;
+//         printf("%d ",b[i]);
+//     }
+//     return 0;
+// }
+// 10.21. Саставити функцију за израчунавање скаларног производа два низа реалних бројева
+// 1
+// 0
+// n
+// i i
+// i
+// s A B
+// -
+// =
+// =Σ , а затим саставити главни програм који ће учитати два низа једнаких дужина n и
+// применом формирани функције исписати скаларни производ два низа.
+// #define MAX 100
+// double skalar(double a[],double b[],int n){
+//     double zbir=0;
+//     int i;
+//     for(i=0;i<n;i++){
+//         zbir+=a[i]*b[i];
+//     }
+//     return zbir;
+// }
+// main(){
+//     double a[MAX],b[MAX];
+//     int i,n;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("\nElementi niza a");
+//     for(i=0;i<n;i++){
+//         scanf("%lf",&a[i]);
+//     }
+//     printf("\nElementi niza b");
+//     for(i=0;i<n;i++){
+//         scanf("%lf",&b[i]);
+//     }
+//     printf("\nSkalarni proizvod ova dva niza iznosi %.2f",skalar(a,b,n));
+//     return 0;
+// }
