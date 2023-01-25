@@ -760,3 +760,169 @@
 //     printf("\nSkalarni proizvod ova dva niza iznosi %.2f",skalar(a,b,n));
 //     return 0;
 // }
+// 10.22. Саставити функцију којом се одређује број различитих елемената у задатом целобројном
+// низу. Затим саставити програм који чита низ целих бројева, и одређује број различитих елемената
+// // користећи претходну функцију и исписује резултат.
+// #define MAX 100
+
+// int raziliciti(const int niz[],int n){
+//     int i,j,brojac=0;
+//     for(i=0;i<n;i++){
+//         for(j=0;j<i && niz[j]!=niz[i];j++);
+//             if(j==i){
+//                 brojac++;
+//         }
+//     }
+//     return brojac;
+// }
+
+// main(){
+//     int a[MAX],i,n;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Niz a: ");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&a[i]);
+//     }
+//     printf("\nBroj razlicitih elemenata u nizu a je %d",raziliciti(a,n));
+//     return 0;
+// }
+// 10.23. Саставити програм за израчунавање статистике полагања испита која обухвата следеће
+// функције: израчунавање укупне просечне оцене (сви који су полгали испит), израчунавање просечне
+// оцене оних који су положили (оцена већа од 5), израчунавање броја који су положили испит,
+// израчунавање броја који нису положили испит и израчунавање броја који имају оцену већу од
+// просечне. У главном програму се уноси број студената и оцене студената у облику низа. Исписати
+// добијене резултате
+// #define MAX 100
+
+// int prosek(int a[],int n){
+//     int i;
+//     float suma=0;
+//     for(i=0;i<n;i++){
+//         suma+=a[i];
+//     }
+//     return (suma/n);
+// }
+// int polozili(int a[],int n){
+//     int i;
+//     float s=0;
+//     for(i=0;i<n;i++){
+//         if(a[i] > 5){
+//             s++;
+//         }
+//     }
+//     return s;
+// }
+// int nisupolozili(int a[],int n){
+//     int i;
+//     float s=0;
+//     for(i=0;i<n;i++){
+//         if(a[i] == 5){
+//             s++;
+//         }
+//     }
+//     return s;
+// }
+
+// int prosekpolozenih(int a[],int n){
+//     int i,k=0;
+//     float s=0;
+//     for(i=0;i<n;i++){
+//         if(a[i] > 5){
+//             s+=a[i];
+//             k++;
+//         }
+//     }
+//     return (s/k);
+// }
+// int BrojNadprosecnih (int a[], int b[], int n, float m)
+// {
+// int i, j=0;
+// for(i=0; i<n; i++)
+// {
+// if(a[i] > m)
+// {
+// b[j]=i;
+// j++;
+// }
+// }
+// return j;
+// }
+
+// main(){
+//     int student[MAX],ocena[MAX],i,n;
+//     printf("Broj studenata:");
+//     scanf("%d",&n);
+//     printf("Ocene ucenika od 5 do 10: ");
+//     for(i=0;i<n;i++){
+//         printf("\nOcena ucenika %d:",i);
+//         scanf("%d",&ocena[i]);
+//     }
+//     printf("\nProsek ocena: %d",prosek(ocena,n));
+//     printf("\nPolozilo je %d ucenika",polozili(ocena,n));
+//     printf("\nNisu %d ucenika polozili",nisupolozili(ocena,n));
+//     printf("\nProsek polozenih %d",prosekpolozenih(ocena,n));
+//     printf("\nBroj nadprosecnih ucenika je %d",BrojNadprosecnih(ocena,student,n,prosek(ocena,n)));
+//     return 0;
+// }
+// 10.24. Саставити функцију која генерише првих n чланова Фибоначијевог низа и функцију која
+// исписује чланове низа, а затим те функције тестирати у главном програму.
+// Фибоначијев низ: f1=1, f2=1, fi=fi-1+fi-2, i=3, 4, 5, ...
+// #define MAX 100 
+// void fibonacijev(int n){
+//     int i,a[MAX];
+//     a[1]=1;
+//     a[0]=1;
+//     for(i=2;i<n;i++){
+//         a[i]=a[i-1]+a[i-2];
+//     }
+//     for(i=0;i<n;i++){
+//         printf("%d ",a[i]);
+//     }
+// }
+// main(){
+//     int a[MAX],i,n;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     fibonacijev(n);
+//     return 0;
+// }    
+// 10.25. Саставити рекурзивну функцију за израчунавање скаларног производа два низа реалних
+// бројева
+// 1
+// 0
+// n
+// i i
+// i
+// s A B
+// -
+// =
+// =Σ , а затим саставити главни програм који ће учитати два низа једнаких дужина n и
+// применом формирани функције исписати скаларни производ два низа.
+
+// float skalproizvod(float a[],float b[],int n){
+//     int i;
+//     float s=0;
+//     for(i=0;i<n;i++){
+//         s+=a[i]*b[i];
+//     }
+//     return s;
+// }
+// #define MAX 100
+
+// main(){
+//     float a[MAX],b[MAX];
+//     int i,n;
+//     printf("Unesite n: ");
+//     scanf("%d",&n);
+//     printf("Niz a:");
+//     for(i=0;i<n;i++){
+//         scanf("%f",&a[i]);
+//     }
+//     printf("Niz a:");
+//     for(i=0;i<n;i++){
+//         scanf("%f",&b[i]);
+//     }
+//     printf("Skalarni proizvod dva nizaje %.2f",skalproizvod(a,b,n));
+//     return 0;
+// }
