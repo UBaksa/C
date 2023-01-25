@@ -926,3 +926,154 @@
 //     printf("Skalarni proizvod dva nizaje %.2f",skalproizvod(a,b,n));
 //     return 0;
 // }
+// 10.4 Претраживање низова
+
+
+// 10.27. Саставити програм који за унети низ реалних бројева, дужине n, исписује елемент највеће
+// вредности, као и његове позиције у низу.
+
+// #define MAX 100
+
+// main(){
+//     double niz[MAX],max;
+//     int i,n,maxi=0;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("\nElementi niza:");
+//     for(i=0;i<n;i++){
+//         scanf("%lf",&niz[i]);
+//     }
+//     max=niz[0];
+//     for(i=1;i<n;i++){
+//         if(niz[i]>max){
+//             max=niz[i];
+//             maxi=i;
+//         }
+//     }
+//     printf("\nPozicija najveceg elementa je %d,a najveci element je %.2f",maxi+1,max);
+//     return 0;
+// }
+// 10.28. Саставити програм који учита низ реалних бројева, дужине n, налази најмањи и највећи члан
+// низа, xmin и xmax, и исписује све елементе низа који су мањи од xmax/2 и већи од xmin*2.
+// #define MAX 100
+
+// main(){
+//     int n,i;
+//     float niz[MAX],xmin,xmax;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Elementi niza:");
+//     for(i=0;i<n;i++){
+//         scanf("%f",&niz[i]);
+//     }
+//     xmax=niz[0];
+//     xmin=niz[0];
+//     for(i=0;i<n;i++){
+//         if(niz[i]> xmax){
+//             xmax=niz[i];
+//         }
+//         if(niz[i]<xmin){
+//             xmin=niz[i];
+//         }
+//     }
+//     for(i=0;i<n;i++){
+//         if(niz[i]>(xmin*2)&& niz[i]<(xmax/2)){
+//             printf("\n %.2f",niz[i]);
+//         }
+//     }
+//     return 0;
+// }
+// 10.29. Саставити програм који за унети низ целих бројева, дужине n, исписује елемент најмање
+// вредности међу парним бројевима.
+// #define MAX 100
+// main(){
+//     int niz[MAX],min,i,n;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("\nElementi niza:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         if(niz[i]%2==0){
+//             min=niz[i];
+//         }
+//     }
+//     if(min == 0)printf("Nema parnih brojeva!");
+//     else{
+//         for(i=0;i<n;i++){
+//             if(niz[i]%2 == 0 && niz[i]<min){
+//                 min=niz[i];
+//             }
+//         }
+//     }
+//     printf("\nNajmanji element medju parnim brojevima je %d",min);
+//     return 0;
+// }
+// 10.30. Саставити програм који за унети низ целих бројева, дужине n, проналази и на екрану
+// исписује елементе на парним позицијама и међу њима проналази онај који има максималну
+// вредност. Минимална дужина низа је 2.
+// #define MAX 100
+// main(){
+//     int niz[MAX],i,n,max;
+//     printf("Unesite n: ");
+//     scanf("%d",&n);
+//     printf("\nElementi niza su :");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     max=niz[1];
+//     printf("Elementi na parnim pozicijama!");
+//     for(i=0;i<n;i++){
+//         if(i%2 !=0){
+//             printf("\t:%d",niz[i]);
+//             if(niz[i]>max){
+//                 max=niz[i];
+//             }
+//         }
+//     }
+//     printf("\nMaximalni medju njima je %d",max);
+//     return 0;
+// }
+// #define MAX 100
+
+// void fibonacijev(int n){
+//     int i,a[MAX];
+//     a[0]=1;
+//     a[1]=1;
+//     for(i=2;i<n;i++){
+//         a[i]=a[i-1]+a[i-2];
+//     }   
+//     printf("Elementi fib niza su:");
+//     for(i=0;i<n;i++){
+//         printf("%d ",a[i]);
+//     }
+// }
+
+// main(){
+//     int i,n,niz[MAX],a[MAX];
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("\nElementi Vaseg niza:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     a[0]=1;
+//     a[1]=1;
+//     for(i=2;i<n;i++){
+//         a[i]=a[i-1]+a[i-2];
+//     }   
+//     printf("Elementi fib niza su:");
+//     for(i=0;i<n;i++){
+//         printf("%d ",a[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         if(niz[i] == a[i]){
+//             printf("Niz je fibonacijev");
+//         }
+//         else{
+//             printf("Niz nije fibonacijev!");
+//         }
+//     }
+//     return 0;
+// }
