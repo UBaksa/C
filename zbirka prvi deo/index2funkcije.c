@@ -1077,3 +1077,119 @@
 //     }
 //     return 0;
 // }
+// 10.32. Саставити програм који за унети низ целих бројева, дужине n, проналази позицију траженог
+// елемента или исписује обавештење да тражени елемент не постоји у низу. Користити методу
+
+// #define MAX 100
+
+// main(){
+//     int i,n,niz[MAX],trazeni,broj=0;
+//     printf("Unesite n; ");
+//     scanf("%d",&n);
+//     printf("Elementi niza: ");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     printf("Unesite trazeni element:");
+//     scanf("%d",&trazeni);
+//     for(i=0;i<n;i++){
+//         if(niz[i] == trazeni){
+//             broj=1;
+//             printf("\nTrazeni element je u nizu,na poziciji %d",i+1);
+//         }
+//     }
+//     if(!broj){
+//         printf("Trazeni element nije u nizu!");
+//     }
+//     return 0;
+// }
+// 10.34. Саставити програм који од унетог низа А целих бројева дужине n формира и исписује низ В
+// са обрнутим распоредом елемената.
+// #define MAX 100
+// main(){
+//     int i,n,a[MAX];
+//     printf("Unesite n ");
+//     scanf("%d",&n);
+//     printf("Elementi niza:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&a[i]);
+//     }
+//     printf("\nNiz preuredjen:");
+//     for(i=n-1;i>=0;i--){
+//         printf("%d ",a[i]);
+//     }
+//     return 0;
+// }
+// 10.35. Саставити програм за циклично премештање елемената задатог низа целих бројева дужине n
+// за једно место у лево и исписивање новодобијеног низа.
+// #define MAX 100
+// main(){
+//     int i,n,a[MAX],pom;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Uneti niz");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&a[i]);
+//     }
+//     for(i=0;i<n-1;i++){
+//         a[i]=a[i+1];
+//         a[i-1]=pom;
+//     }
+//     printf("Ciklicno pomeren niz");
+//     for(i=0;i<n;i++){
+//         printf("%d ",a[i]);
+//     }
+//     return 0;
+// }
+// // ZEKO DA POKAZE ZAMENU MESTA ROTIRANJE ITD...
+
+//                  MATRICCCEEEEEEEEEEEEEEEEEEEE
+
+// 11.1. Саставити програм који учитава, а затим исписује елементе матрице mxn. Елементи матрице
+// су цели бројеви.
+
+// #define MAX 100
+
+// main()
+// {
+//     int i,n,j,m,mat [MAX] [MAX];
+//     printf("Vrsta m:");
+//     scanf("%d",&m);
+//     printf("Kolona n");
+//     scanf("%d",&n);
+//     for(i=0;i<m;i++){
+//         for(j=0;j<n;j++){
+//             printf("    element [%d][%d] = ",i,j);
+//             scanf("%d",&mat[i] [j]);
+//         }
+//     }
+//     printf("Uneta matrica je:");
+//     for(i=0;i<m;i++){
+//         for(j=0;j<n;j++){
+//             printf(" %d",mat[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+// 11.2. Саставити програм који за унету матрицу димензија nxn врши сабирање њених елеменета и
+// исписује добијени резултат. Елементи су цели бројеви.
+// #define MAX 100
+// main(){
+//     int i,n,j,mat[MAX] [MAX],suma=0;
+//     printf("Unesite n:");
+//     scanf("%d",&n);
+//     printf("Uneti elementi matrice:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             suma+=mat[i][j];
+//         }
+//     }
+//     printf("Zbir svih clanova matrice je %d",suma);
+//     return 0;
+// }
