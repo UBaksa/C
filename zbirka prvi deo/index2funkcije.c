@@ -1193,3 +1193,65 @@
 //     printf("Zbir svih clanova matrice je %d",suma);
 //     return 0;
 // }
+// 11.3. Саставити програм који учита матрицу димензија mхn, а затим врши сабирање елемената
+// који су парни бројеви. На крају исписати суму парних бројева и број елемената који су једнаки нули.
+// Елементи матрице су цели бројеви од 0 до 9.
+// #define MAX 100
+// main()
+// {
+//     int i,n,j,m,mat[MAX] [MAX],suma=0,nule=0;
+//     printf("Unesite vrstu n");
+//     scanf("%d",&n);
+//     printf("Unesite kolonu m");
+//     scanf("%d",&m);
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             if(mat[i][j]%2 == 0){
+//                 suma+=mat[i][j];
+//             }
+//             if(mat[i][j] == 0){
+//                 nule++;
+//             }
+//         }
+//     }
+//     printf("\nSuma parnih brojeva je %d",suma);
+//     printf("\nNula ima %d",nule);
+//     return 0;
+// }
+// 11.4. Саставити програм који учита две матрице целих бројева, a и b, обе димензија mхn, а затим
+// // врши сабирање ове две матрице и исписује нову матрицу с. Матрице се сабирају тако што се
+// // сабирају елементи матрица са истим индексима.
+// #define MAX 100
+
+// main(){
+//     int i,j,n,m,mat[MAX] [MAX],mat2[MAX] [MAX];
+//     printf("Unesite n za vrstu:");
+//     scanf("%d",&n);
+//     printf("Unesite m za kolonu:");
+//     scanf("%d",&m);
+//     printf("Prva matrica:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     printf("Druga matrica:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             scanf("%d",&mat2[i][j]);
+//         }
+//     }
+//     printf("Nova matrica:");
+//    for(i=0; i<n; i++)
+// {
+// for(j=0; j<m; j++)
+// printf(" %d", mat[i][j]+mat2[i][j]);
+// printf("\n");
+// }
+//     return 0;
+// }
