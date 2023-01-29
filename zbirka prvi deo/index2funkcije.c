@@ -1255,3 +1255,98 @@
 // }
 //     return 0;
 // }
+// 11.5. Саставити програм који ће учитати матрицу димензија nxn, а затим исписати матрицу у
+// облику таблице, исписати све елементе на главној и споредној дијагонали, као и суме елемената на
+// главној и споредној дијагонали. Елементи матрице су цели бројеви.
+// #define MAX 100
+
+// main()
+// {
+//     int j,i,n,mat[MAX] [MAX],sg=0,ss=0;
+//     printf("Unesite n:");
+//     scanf("%d",&n);
+//     printf("Unesite elemente matrice:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     printf("\nMatrica izgleda ovako:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             printf(" %d",mat[i][j]);
+//             printf("\n");
+//         }
+//     }
+//     printf("Dobijanje suma:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             if(i=j){
+//                 sg+=mat[i][j];
+//             }
+//             ss+=mat[i][n-i-1];
+//         }
+//     }
+//     printf("\nSuma glavne : %d",sg);
+//     printf("\nSuma sporedne : %d",ss);
+//     return 0;
+// // }
+// 11.6. Саставити програм који учита матрицу димензија nxn, а затим је исписује у облику таблице и
+// израчунава и исписује суму елемената у свакој врсти. Елементи матрице су цели бројеви.
+// #define MAX 100
+// main()
+// {
+//     int i,j,n,s=0,mat[MAX][MAX];
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     printf("Uneta matrica:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++)
+//         printf(" %d",mat[i][j]);
+//         printf("\n");
+//     }
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++)
+//         s+=mat[i][j];
+//         printf(" %d",s);
+//     }
+//     printf("Suma elemenata po vrsti iznosi %d",s);
+//     return 0; 
+// }
+// 11.7. Саставити програм који учита матрицу димензија mxn, а затим је исписује у облику таблице
+// и на основу унетог редног броја врсте врши сабирање елемената у тој врсти. Елементи матрице су
+// цели бројеви.
+// #define MAX 100
+
+// main()
+// {
+//     int i,j,n,m,broj,s=0,mat[MAX] [MAX];
+//     printf("Unesite n vrstu ");
+//     scanf("%d",&n);
+//     printf("Unesite m vrstu ");
+//     scanf("%d",&m);
+//     printf("Unesite koju cete vrstu da uzmete za zbir:");
+//     scanf("%d",&broj);
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             scanf("%d",&mat[i] [j]);
+//         }
+//     }
+//     printf("Uneta matrica:");
+//     printf("\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++)
+//         printf(" %d",mat[i][j]);
+//         printf("\n");
+//     }
+//     for(j=0;j<m;j++){
+//         s+=mat[broj-1][j];
+//     }
+//     printf("Suma iznosi %d",s);
+//     return 0;
+// }
