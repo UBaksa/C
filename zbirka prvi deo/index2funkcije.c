@@ -1460,9 +1460,9 @@
 // }
 // 10.34. Саставити програм који од унетог низа А целих бројева дужине n формира и исписује низ В
 // са обрнутим распоредом елемената.
-#define MAX 100
+// #define MAX 100
 
-main()
+// main()
 // {
 //     int i,n,niz[MAX];
 //     printf("Unesite n:");
@@ -1480,3 +1480,24 @@ main()
 //     }
 //     return 0;
 // }
+// 10.35. Саставити програм за циклично премештање елемената задатог низа целих бројева дужине n
+// за једно место у лево и исписивање новодобијеног низа.
+#define MAX 100
+main(){
+    int i,n,pom,niz[MAX];
+    printf("Unesite n");
+    scanf("%d",&n);
+    printf("Uneti niz");
+    for(i=0;i<n;i++){
+        scanf("%d",&niz[i]);
+    }
+    printf("Pomeren niz:");
+    pom=niz[0];
+    for(i=1;i<n-1;i++){
+        niz[i]=niz[i+1];
+        printf("%d",niz[i]);
+    }
+    niz[n-1]=pom;
+    printf("%d",niz[n-1]);
+    return 0;
+}
