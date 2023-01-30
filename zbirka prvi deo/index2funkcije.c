@@ -1290,7 +1290,7 @@
 //     printf("\nSuma glavne : %d",sg);
 //     printf("\nSuma sporedne : %d",ss);
 //     return 0;
-// // }
+// }
 // 11.6. Саставити програм који учита матрицу димензија nxn, а затим је исписује у облику таблице и
 // израчунава и исписује суму елемената у свакој врсти. Елементи матрице су цели бројеви.
 // #define MAX 100
@@ -1348,5 +1348,135 @@
 //         s+=mat[broj-1][j];
 //     }
 //     printf("Suma iznosi %d",s);
+//     return 0;
+// // }
+// 11.8. Саставити програм који учита матрицу целих бројева А димензија mxn, а затим исписује
+// њене елементе у редоследу као што је приказано на следећој слици:
+// #define MAX 100
+// main()
+// {
+//     int i,j,n,m,mat[MAX][MAX];
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Unesite m");
+//     scanf("%d",&m);
+//     printf("Uneta matrica:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     printf("Sredjen niz");
+//     for(j=0;j<m;j++){
+//         if(j%2==0){
+//             for(i=0;i<n;i++)
+//             printf("%d",mat[i][j]);
+//         }
+//         else
+//         for(i=n-1;i>=0;i--){
+//             printf("%d",mat[i][j]);
+//         }
+//     }
+//     return 0;
+// }
+// Rastaviti na faktore
+
+// main()
+// {
+//     int broj,faktor,i,broj1;
+//     printf("Unesite broj:");
+//     scanf("%d",&broj);
+//     broj1=broj;
+//     for(i=2;i<broj;i++){
+//         if(broj1%i==0){
+//             printf("%d ",i);
+//             broj1=broj1/i;
+//             i--;
+//         }
+        
+//     }
+//     return 0;
+// }
+// broj tacaka,n tacaka.
+
+// main()
+// {
+//     int x,y,i,n;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     switch(x,y){
+//         case (x>0 && y>0):...
+//     }
+// }
+// #define MAX 100
+// main(){
+//     int j,k,i,n,niz[MAX],s=0,s1=0;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Uneti niz");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     printf("Uneti niz");
+//     for(i=0;i<n;i++){
+//         printf("%d ",niz[i]);
+//     }
+//     printf("\nProveravanje niza");
+//     for(i=1;i<n-1;i++){
+//         for(j=0;j<i;j++){
+//             s+=niz[j];
+//         }
+//         for(k=i+1;k<n;k++){
+//             s1+=niz[k];
+//         }
+//         if(s==s1){
+//             printf("Indeks je %d ",i);
+//         }
+//         s1=0;
+//         s=0;//BITNO JE DA SE RESETUJE JER ZA SVAKU ROTACIJU MORA DA SE RR SUMA!!
+        
+//     }
+//     return 0;
+// }
+// septembar 2018 2 zad
+// main(){
+//     int i,n,broj,v,suma=0;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     if(n>100){
+//         printf("ne moze");
+//         return 1;
+//     }
+//     printf("Unesite v broj");
+//     scanf("%d",&v);
+//     i=0;
+//     while(i<n){
+//         scanf("%d",&broj);
+//         if(broj<v)suma+=broj;
+//         if(broj==v)printf("%d",i+1);
+//         i++;
+//     }
+//     return 0;
+// }
+// 10.34. Саставити програм који од унетог низа А целих бројева дужине n формира и исписује низ В
+// са обрнутим распоредом елемената.
+#define MAX 100
+
+main()
+// {
+//     int i,n,niz[MAX];
+//     printf("Unesite n:");
+//     scanf("%d",&n);
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     printf("\nNiz:");
+//     for(i=0;i<n;i++){
+//         printf("%d ",niz[i]);
+//     }
+//     printf("\nNiz B");
+//     for(i=n-1;i>=0;i--){
+//         printf("%d ",niz[i]);
+//     }
 //     return 0;
 // }
