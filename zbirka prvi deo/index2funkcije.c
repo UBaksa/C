@@ -1482,22 +1482,230 @@
 // }
 // 10.35. Саставити програм за циклично премештање елемената задатог низа целих бројева дужине n
 // за једно место у лево и исписивање новодобијеног низа.
-#define MAX 100
-main(){
-    int i,n,pom,niz[MAX];
-    printf("Unesite n");
-    scanf("%d",&n);
-    printf("Uneti niz");
-    for(i=0;i<n;i++){
-        scanf("%d",&niz[i]);
-    }
-    printf("Pomeren niz:");
-    pom=niz[0];
-    for(i=1;i<n-1;i++){
-        niz[i]=niz[i+1];
-        printf("%d",niz[i]);
-    }
-    niz[n-1]=pom;
-    printf("%d",niz[n-1]);
-    return 0;
-}
+// #define MAX 100
+// main(){
+//     int i,n,pom,niz[MAX];
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Uneti niz");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     printf("Pomeren niz:");
+//     pom=niz[0];
+//     for(i=0;i<n-1;i++){
+//         niz[i]=niz[i+1];
+//         printf("%d",niz[i]);
+//     }
+//         niz[n-1]=pom;
+//     printf("%d",niz[n-1]);
+//     return 0;
+// }
+// 10.36. Саставити програм који за унети низ целих бројева дужине n врши ротирање чланова низа за
+// x места у лево и исписује новодбијени низ.
+// #define MAX 100
+
+// void rotiraj(int a[],int n){
+//     int i,pom;
+//     pom=a[0];
+//     for(i=0;i<n;i++)
+//         a[i]=a[i+1];
+//     a[n-1]=pom;
+// }
+
+// main()
+// {
+//     int x,n,i,niz[MAX];
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Unesite x:");
+//     scanf("%d",&x);
+//     printf("Niz :");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     printf("\nNiz izgleda ovako:");
+//     for(i=0;i<n;i++){
+//         printf("%d ",niz[i]);
+//     }
+//     printf("Niz pomeren:");
+//     for(i=0;i<x;i++){
+//         rotiraj(niz,n);
+//     }
+//     printf("\n");
+//     for(i=0;i<n;i++){
+//         printf("%d ",niz[i]);
+//     }
+//     return 0;
+// }
+// 10.37. Саставити програм који за унети низ целих бројева дужине n врши замену суседних
+// елемената низа на парним и непарним позицијама и исписује новодобијени низ.
+// #define MAX 100
+
+// void zameni(int a[],int n){
+//     int i,pomoc;
+//     pomoc=a[i];
+//     for(i=0;i<n-1;i+=2){
+//     pomoc=a[i];
+//         a[i]=a[i+1];
+//     a[i+1]=pomoc;
+//     }
+// }
+
+// main(){
+//     int i,n,niz[MAX];
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Niz");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     zameni(niz,n);
+//     printf("Novodobijeni niz:");
+//     for(i=0;i<n;i++){
+//         printf("%d ",niz[i]);
+//     }
+//     return 0;
+// }
+// 10.38. Саставити програм који за унети низ целих бројева дужине n формира и приказује нови низ
+// који је састављен од елемената без понављања унетог низа.
+
+// #define MAX 100
+
+// main()
+// {
+//     int i,n,niz[MAX],ponavlja,j;
+//     printf("Unesi n");
+//     scanf("%d",&n);
+//     printf("Niz\n");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     for(i=0;i<n-1;i++){
+//             ponavlja=0;
+//         for(j=i+1;j<n;j++)
+//             if(niz[i]==niz[j]){
+//                 ponavlja=1;
+//                 break;
+//             }
+//             if(!ponavlja){
+//                 printf("%d",niz[i]);
+//             }
+//     }
+//     printf("%d",niz[n-1]);
+//     return 0;
+// }
+// 10.39. Саставити програм за сортирање унетог низа целих бројева дужине n у неопадајући поредак
+// методом избора (Selection Sort). Исписати сортирани низ.
+// Selection Sort подразумева да минимални елемент низа размени са a[0], минимални елемент
+// одсечка a[1], a[2], …, a[n-1] разменити са a[1], минимални елемент одсечка a[2], a[3], …, a[n-1]
+// разменити са
+// #define MAX 100
+
+// main(){
+//     int i,n,niz[MAX],pom,j;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Uneti niz:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     printf("Sortiran niz:");
+//     for(i=0;i<n-1;i++){
+//         for(j=i+1;j<n;j++){
+//             if(niz[i] > niz[j]){
+//                 pom=niz[i];
+//                 niz[i]=niz[j];
+//                 niz[j]=pom;
+//             }
+//         }
+//     }
+//     for(i=0;i<n;i++){
+//         printf("%d ",niz[i]);
+//     }
+//     return 0;
+// }
+// 11.10. Саставити програм који учита један цео број х и матрицу целих бројева А димензија nxn, а
+// затим формира нову матрицу тако што све елементе испод главне дијагонала увећа за вредност х, а
+// елементе изнад главне дијагонале увећава за 2х. Елементи на главној дијагонали се не мењају.
+// Исписати добијену матрицу.
+// #define MAX 100
+
+// main()
+// {
+//     int i,j,n,x,mat[MAX] [MAX];
+//     printf("Unesite n:");
+//     scanf("%d",&n);
+//     printf("Unesite x");
+//     scanf("%d",&x);
+//     printf("Uneta matrica:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     printf("Uneta matrica izgleda ovako:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++)
+//         printf(" %d",mat[i][j]);
+//         printf("\n");
+//     }
+//     printf("Nova matrica:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//         if(i>j){
+//             mat[i][j]+=x;
+//         }
+//         if(i<j){
+//             mat[i][j]+=2*x;
+//         }
+//     }
+//     }
+//     printf("Novodobijeni niz igleda ovako:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++)
+//         printf(" %d",mat[i][j]);
+//         printf("\n");
+//     }
+//     return 0;
+// }
+// 11.12. Саставити програм који учита матрицу целих бројева А димензија nxn, а затим исписује
+// матрицу у облику таблице и врши њено транспоновање. Танспонована матрица је матрица која се
+// добија када се врсте почетне матрице поређају по колонама.
+// а) без употребе функција;
+// #define MAX 100
+
+// main()
+// {
+//     int i,n,j,pom,mat[MAX] [MAX];
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Unesite  niz:\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     printf("Prikaz tr matrice:\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++)
+//         printf(" %d",mat[i][j]);
+//         printf("\n");
+//     }
+//     printf("Transponovana matrica:\n");
+//     for(i=0;i<n-1;i++){
+//         for(j=i+1;j<n;j++){
+//             pom=mat[i][j];
+//             mat[i][j]=mat[j][i];
+//             mat[j][i]=pom;
+//         }
+//     }
+//     printf("\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             printf(" %d",mat[i][j]);
+//             printf("\n");
+//         }
+//     }
+//     return 0;
+// }CAKA ZA TRANSPONOVANU MATRICU!!!!!!!
