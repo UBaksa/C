@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include <math.h>
 #include <string.h>
+#include <stdlib.h>
 // 1.4. Саставити програм који штампа унети низ карактера ред по ред.
 #define MAX 100
 // main()
@@ -681,4 +682,244 @@
 //         printf("Ne nalazi se!");
 //     }
 //     return 0;
+// }
+// 4.19. Саставити структуру која садржи податке о датуму (дан, месец и година), а затим користећи
+// формирану структуру саставити главни програм који уноси податке о пет датума и исписује исте.
+
+// struct datum{
+//     int dan,mesec,godina;
+// };
+
+// main(){
+//     struct datum danas[5];
+//     int i;
+//     for(i=0;i<5;i++){
+//         printf("Unesite datum po redosledu dan-mesec-godina:\n");
+//         scanf("%d %d %d",&danas[i].dan,&danas[i].mesec,&danas[i].godina);
+//     }
+//     printf("Uneti datumi:");
+//     for(i=0;i<5;i++){
+//         printf("%d %d %d\n",danas[i].dan,danas[i].mesec,danas[i].godina);
+//     }
+//     return 0;
+// }
+
+// 4.23. Саставити програм који учитава податке о n МР3 песама (назив, извођач, албум, година
+// издања), а затим исписује унете песме и приказује број песмама издатих у 2011. години.
+// #define MAX 100
+// typedef struct pesme{
+//     char naziv[30];
+//     char izvodjac[30];
+//     char album[30];
+//     int godina;
+// }PESME;
+
+// void citajZapis(PESME *p){
+//     printf("Unesite naziv pesme:");
+//     gets((*p).naziv);
+//     printf("Unesite izvodjaca:");
+//     gets((*p).izvodjac);
+//     printf("Unesite naziv albuma:");
+//     gets((*p).album);
+//     printf("Unesite godinu izbacivanja albuma");
+//     scanf("%d",&(*p).godina);
+//     while(getchar()!='\n');
+// }
+// main(){
+//     PESME pesma[MAX];
+//     int i,n,s=0;
+//     printf("Unesite broj pesama:");
+//     scanf("%d",&n);
+//     for(i=0;i<n;i++){
+//         printf("Unesite podatke za pesmu:");
+//         citajZapis(&pesma[i]);
+//     }
+//     printf("Zavrsen unos:\n");
+//     for(i=0;i<n;i++){
+//         printf("%s %s %s %d\n",pesma[i].naziv,pesma[i].izvodjac,pesma[i].album,pesma[i].godina);
+//         if(pesma[i].godina == 2011){
+//             s++;
+//         }
+//     }
+//     printf("\nBroj pesama koji su izbacene 2011 godine je %d",s);
+//     return 0;
+// }
+// 4.28. Структура о студентима се састоји од имена, презимена и оцене. Саставити програм којим се
+// учитава низ од n студената и сортира их по њиховим оценама. Исписати сортирани списак
+// студената.
+// #define MAX 100
+// typedef struct studentt{
+//     char ime[30];
+//     char prezime[30];
+//     int ocena;
+// }STUDENTI;
+
+// void zapis(STUDENTI studentt){
+//     printf("Unesite ime studenta:\n");
+//     gets(student.ime);
+//     printf("Unesite prezime studenta:\n");
+//     gets(student.prezime);
+//     printf("Unesite ocenu:\n");
+//     scanf("%d",student.ocena);
+// }
+
+// main(){
+//     STUDENTI osoba,pom;
+//     int n,i,j;
+//     printf("Unesite koliko hocete ucenika:");
+//     scanf("%d",&n);
+//     pritnf("\nUnesite podatke ucenika:");
+//     for(i=0;i<n;i++){
+//         zapis(osoba[i]);
+//     }
+//     printf("Pregledavanje i sortiranje ucenika po ocenama:\n");
+//     for(i=0;i<n-1;i++){
+//         for(j=i+1;j<n;j++){
+//             if(osoba[i].ocena > osoba[j].ocena){
+//                 pom=osoba[i];
+//                 osoba[i]=osoba[j];
+//                 osoba[j]=pom;
+//             }
+//         }
+//     }
+//     printf("\nUredjen niz!\n");
+//     for(i=0;i<n;i++){
+//         printf("%s %s %d \n",osoba[i].ime,osoba[i].prezime,osoba[i].ocena);
+//     }
+//     return 0;
+// }
+/////////////////////////////////DATOTEKE///////////////////////////////////////
+
+
+
+// 5.1. Саставити програм којим се у датотеку podaci.txt уписује првих 10 целих бројева , а затим се
+// из исте датотеке читају бројеви док се не достигне до краја датотеке, а затим се бројеви исписују на
+// // стандарни излаз (екран).
+// main()
+// {
+//     int i,br;
+//     FILE *dato;
+//     dato=fopen("podaci.txt","w");
+//     if(dato==NULL){
+//         printf("\nGRESKA pri otvaranju datoteke.txt");
+//         exit(1);
+//     }
+//     for(i=0;i<10;i++){
+//         fprintf(dato,"%d\n",i);
+//     }
+//     fclose(dato);
+//     dato=fopen("podaci.txt","r");
+//     if(dato==NULL){
+//         printf("\nGRESKA pri otvaranju datoteke.txt");
+//         exit(1);
+//     }
+//     while(1){
+//         fscanf(dato,"%d",&br);
+//         if(feof(dato)){
+//             break;
+//         }
+//         printf("Procitano:%d\n",br);
+//     }
+//     fclose(dato);
+//     return 0;
+// }
+// 5.2. Дата је датотека podaci2.txt чији је садржај приказан
+// на слици. Саставити програм који у постојећеој датотеци
+// дописује текст ''Pozdrav svima''.
+
+// main(){
+//     FILE *dato;
+//     dato=fopen("podaci2.txt","w");
+//     if(dato==NULL){
+//         printf("\nGRESKA!!!!");
+//         exit(1);
+//     }
+//     fprintf(dato,"Zdravo svima\nOvo je datoteka!");
+//     fclose(dato);
+//     fopen(dato,"a");
+//     fprintf(dato,"Pozdrav svima");
+//     fclose(dato);
+//     return 0;   
+// }
+// main()
+// {
+// FILE *dato;
+// int najmanji, najveci, broj;
+// dato=fopen("brojevi.txt","r");
+// if(dato==NULL)
+// {
+// printf("\n Greska pri otvaranju datoteke!");
+// exit(1);
+// }
+// fscanf(dato,"%d",&broj);
+// najmanji=broj;
+// najveci=broj;
+// while(fscanf(dato,"%d",&broj)!=EOF)
+// {
+// if(broj<najmanji) najmanji=broj;
+// if(broj>najveci) najveci=broj;
+// }
+// fclose(dato);
+// printf("\n Najmanji je broj: %d", najmanji);
+// printf("\n Najveci broj: %d", najveci);
+// return 0;
+// }
+// 5.4. Дата је датотека BrojeviStari.txt која у сваком реду садржи по један цео број. Саставити
+// програм који формира датотеку BrojeviNovi.txt тако што из датотеке BrojeviStari.txt преписује
+// бројеве из парних редова, а из непарних удвостручује.
+// main(){
+//     int broj,i=1;
+//     FILE *a,*b;
+//     a=fopen("BrojeviStari.txt","r");
+//     if(a==NULL){
+//         printf("\nGRESKA NEMA MEMORIJE!");
+//         exit(1);
+//     }
+//     b=fopen("BrojeviNovi.txt","w");
+//     if(b==NULL){
+//     printf("\nGRESKA NEMA MEMORIJE!");
+//         exit(1);
+//     }
+//     while(fscanf(a,"%d",&broj) !=EOF){
+//         if(i%2==0){
+//             fprintf(b,"%d",broj);
+//         }
+//         else{
+//             fprintf(b,"%d",2*broj);
+//         }
+//         i++;
+//     }
+//     fclose(a);
+//     fclose(b);
+//     getche();
+//     return 0;
+// }
+// main()
+// {
+// int broj, i=1;
+// FILE *a,*b;
+// a=fopen("BrojeviStari.txt","r");
+// if(a==NULL)
+// {
+// printf("\n Greska pri otvaranju datoteke!");
+// exit(1);
+// }
+// b=fopen("BrojeviNovi.txt","w");
+// if(b==NULL)
+// {
+// printf("\n Greska pri otvaranju datoteke!");
+// exit(1);
+// }
+// while(fscanf(a,"%d",&broj)!=EOF)
+// {
+// if(i%2==0)
+// fprintf(b,"%d\n", broj);
+// else
+// fprintf(b,"%d\n", 2*broj);
+// i++;
+// }
+// fclose(a);
+// fclose(b);
+// getche();
+// return 0;
 // }
