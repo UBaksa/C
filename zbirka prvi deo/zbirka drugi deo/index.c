@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 #include <math.h>
 #include <string.h>
 // 1.4. Саставити програм који штампа унети низ карактера ред по ред.
@@ -359,5 +359,326 @@
 //         printf("%d ",niz[i]);
 //     }
 //     free(niz);
+//     return 0;
+// }
+// 3.14. Саставити програм који са стандардног улаза чита целе бројеве све док се не унесе 0. Бројеви
+// се смештају у низ. Не правити никакве претпоставке о димензији низа целих бројева. Унети низ
+// исписати у обрнутом редоследу. Меморију проширивати:
+// а) употребом realloc() функције;
+// #define KORAK 10
+// main(){
+//     int *niz,i,br=0,element;
+//     niz=malloc(KORAK*sizeof(int));
+//     if(niz==NULL){
+//         printf("\nGRESKA nema memorije!!");
+//         return 1;
+//     }
+//     while(scanf("%d",&element) != 0){
+//         niz[br++]=element;
+//         if(br>=KORAK){
+//             niz=realloc(niz,(KORAK/br)*sizeof(int));
+//             if(niz==NULL){
+//                 printf("\nGRESKA,nema memorije");
+//                 return 1;
+//             }
+//         }
+//     }
+//     printf("\nNiz obrnutim redosledom!");
+//     for(i=br-1;i>=0;i--){
+//         printf("%d ",niz[i]);
+//     }
+//     free(niz);
+//     return 0;
+// }
+// 3.15. Саставити програм за унети низ целих бројева дужине n врши уметање новог елемента
+// између ј-тог и ј+1-ог елемента датог низа. Исписати новоформирани низ. Низ сместити у динамичку
+// зону меморије.
+// main()
+// {
+//     int n,*niz,i,j,k;
+//     printf("Unesite duzinu niza:");
+//     scanf("%d",&n);
+//     niz=malloc((n+1)*sizeof(int));
+//     printf("Unesite niz:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     printf("Unesite poziciju novog clana:");
+//     scanf("%d",&j);
+//     if(j<=0 || j>n){
+//         printf("\nUnesite pozitivan ceo broj!");
+//         return 1;
+//     }
+//     printf("Unesite koji ce to biti element");
+//     scanf("%d",&k);
+//     niz[j-1]=k;
+//     for(i=j;i<n+1;i++){
+//         niz[i+1]=niz[i];
+//     }
+//     printf("\nNiz sa umetnutim elementom:");
+//     for(i=0;i<n+1;i++){
+//         printf("%d ",niz[i]);
+//     }
+//     free(niz);
+//     return 0;
+// }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////// STRUKTURE //////////////////////////////////////
+
+// struct osoba
+// {
+// char prezime[15];
+// char ime[15];
+// int visina;
+// };
+// main(){
+//     struct osoba;
+//     osoba.prezime = "Markovic";
+//     osoba.ime = "Marko";
+//     osoba.visina = 190;
+//     printf("%s %s %d",osoba.prezime,osoba.ime,osoba,visina);
+//     return 0;
+//     }
+// 4.3. а) Саставити структуру која садржи дан, месец и годину, затим у главном програму
+// користећи ову структуру унети податке о дану, месецу и години и исписати датум.
+// б) Саставити структуру која садржи податке о раднику (име, презиме и месецна плата),
+// затим у главном програму користећи ову структуру унети податке о раднику и исписати исте.
+
+// struct datum{
+//     int dan;
+//     int mesec;
+//     int godina;
+// };
+// main(){
+//     int d,g,m;
+//     struct datum danas;
+//     printf("Unesite datum");
+//     scanf("%d",&d);
+//     printf("Unesite mesec");
+//     scanf("%d",&m);
+//     printf("Unesite godinu");
+//     scanf("%d",&g);
+//     danas.dan = d;
+//     danas.godina = g;
+//     danas.mesec = m;
+//     printf("%d-mesec,\n%d-godina,\n%ddan",m,g,d);
+//     return 0;
+// }
+
+// Саставити структуру која садржи податке о раднику (име, презиме и месецна плата),
+// затим у главном програму користећи ову структуру унети податке о раднику и исписати исте.
+
+// struct osoba{
+//     char ime[30];
+//     char prezime[30];
+//     float plata;
+// };
+// main(){
+//     struct osoba radnik;
+//     printf("Ime:");
+//     scanf("%s", &radnik.ime);
+//     printf("Ime pre zime:");
+//     scanf("%s", &radnik.prezime);
+//     printf("Plata");
+//     scanf("%f", &radnik.plata);
+//     printf("Ime %s prezime %s plata %.2f",radnik.ime,radnik.prezime,radnik.plata);
+//     return 0;
+// } 
+// 4.4. Саставити програм који учитава податке за две особе (име и презиме, адреса и старост у
+// годинама), а затим исписује податке о старијој особи.
+// struct osoba{
+//     char ime[30];
+//     char prezime[30];
+//     int starost;
+// };
+// main(){
+//     struct osoba person1, person2, s;
+//     printf("Persona1");
+//     gets(person1.ime);
+//     gets(person1.prezime);
+//     scanf("%d",&person1.starost);
+//     printf("Persona 2");
+//     gets(person2.ime);
+//     gets(person2.prezime);
+//     scanf("%d",&person2.starost);
+//     if(person1.starost > person2.starost){
+//         s=person1.starost;
+//     }
+//     else{
+//         s=person2.starost;
+//     }
+//     printf("Starija je osoba %s %s sa %d godina",s.ime,s.prezime,s.starost);
+//     return 0;
+// }
+// 4.13. Саставити структуру која садржи податке о датуму (дан, месец и година), а затим користећи
+// формирану структуру саставити главни програм који за унете податке о дану, месецу и години
+// исписује датум. Приступ члановима структуре остварити преко показивача.
+
+// struct datum {
+//     int dan;
+//     int mesec;
+//     int godina;
+// };
+
+
+// main()
+// {
+//     int d,m,g;
+//     struct datum Danas, *danas;
+//     printf("\nDan");
+//     scanf("%d",&d);
+//     printf("\nMesec: ");
+//     scanf("%d",&m);
+//     printf("\nGodina: ");
+//     scanf("%d",&g);
+//     danas = &Danas;
+//     (*danas).dan = d;
+//     (*danas).mesec = m;
+//     (*danas).godina = g;
+//     printf("\nDanasnji datum: %d %d %d",(*danas).dan,(*danas).mesec,(*danas).godina);
+//     return 0;
+// }
+// 4.14. Саставити функцију којим се учитавају подаци за особу (име и презиме, адреса и старост у
+// годинама), а затим у главном програму користећи претходну функцију учитати податке за две особе
+// и исписати податке о старијој особи.
+// struct osoba{
+//     char ime[30];
+//     char prezime[50];
+//     int starost;
+// };
+
+// main()
+// {
+//     struct osoba person1,person2, *stariji;
+//     printf("-----PRVA OSOBA----\n");
+//     printf("Ime: ");
+//     gets(person1.ime);
+//     printf("Prezime: ");
+//     gets(person1.prezime);
+//     printf("Starost:");
+//     scanf("%d",&person1.starost);
+//     printf("-----DRUGA OSOBA----\n");
+//     printf("Ime: ");
+//     gets(person2.ime);
+//     printf("Prezime: ");
+//     gets(person2.prezime);
+//     printf("Starost:");
+//     scanf("%d",&person2.starost);
+//     if(person1.starost > person2.starost){
+//         stariji =&person1;
+//     }
+//     else{
+//         stariji=&person2;
+//     }
+//     printf("\nStarija osoba je: %s %s %d",(*stariji).ime,(*stariji).prezime,(*stariji).starost);
+//     return 0;
+// }
+
+// 4.15. Саставити програм који учитава структуру која садржи три координате вектора, а затим у
+// главном програму одредити и исписати његов интензитет:
+
+// struct Vektor{
+//     float x;
+//     float y;
+//     float z;
+// };
+
+// main(){
+//     struct Vektor vektor3d;
+//     float rezultat;
+//     printf("Unesite x koordinatu:");
+//     scanf("%f",&(vektor3d.x));
+//     printf("Unesite y koordinatu:");
+//     scanf("%f",&(vektor3d.y));
+//     printf("Unesite z koordinatu:");
+//     scanf("%f",&(vektor3d.z));
+//     rezultat=sqrt(vektor3d.x*vektor3d.x + vektor3d.y*vektor3d.y + vektor3d.z*vektor3d.z);
+//     printf("Intenzitet vektora iznosi %.2f",rezultat);
+//     return 0;
+// }
+// 4.16. Саставити главни функцију која проверава да ли се задата тачка налази унутар задатог круга.
+// Параметри круга су координате центра и полупречник. Затим саставити програм који тестира
+// претходну функцију.
+
+// struct tacka{
+//     double x;
+//     double y;
+// };
+
+// struct krug{
+//     struct tacka o;
+//     double r;
+// };
+
+// double Rastojanje(struct tacka *a,struct tacka *b){
+//     return sqrt(((*a).x - (*b).x)*((*a).x - (*b).x)+((*a).y - (*b).y)*((*a).y - (*b).y));
+// }
+
+// int pripadanje(struct tacka *t,struct krug *k){
+//     if(Rastojanje(t,&(*k).o)<=(*k).r){
+//         return 1;
+//     }
+//     else{
+//         return 0;
+//     }
+// }
+// main()
+// {
+// struct tacka t;
+// struct krug k;
+// printf("\n Unesite koordinate tacke koja se testira: ");
+// scanf("%lf%lf", &t.x, &t.y);
+// printf(" Unesite koordinate centra kruga: ");
+// scanf("%lf%lf", &k.o.x, &k.o.y);
+// printf(" Unesite poluprecnik kruga: ");
+// scanf("%lf", &k.r);
+// if(pripadanje(&t, &k))
+// printf("\n Tacka pripada krugu.");
+// else
+// printf("\n Tacka ne pripada krugu.");
+// return 0;
+// }
+// 4.17. Саставити главни функцију која проверава да ли се задата тачка налази унутар задатог
+// правоугаоника. Функција треба да врати вредност различиту од нуле уколико се тачка налази унутар
+// задатог правоугаоника. Затим саставити програм који тестира претходну функцију. Правоугаоник се
+// налази у првом квадранту координатног система. Тачке правоугаоника које се задају су доња лева и
+// горња десна.
+
+// struct tacka{
+//     float x;
+//     float y;
+// };
+
+// struct pravouganik{
+//     struct tacka doleLevo;
+//     struct tacka goreDesno;
+// };
+// int proveravanje(struct pravouganik pr,struct tacka *t){
+//     return ((*t).x > pr.doleLevo.x && (*t).x < pr.goreDesno.x && (*t).y > pr.doleLevo.y && (*t).y < pr.goreDesno.y);
+// }
+
+// main(){
+//     struct tacka *tt;
+//     struct pravouganik prr;
+//     int x1,x2,x3,y1,y2,y3;
+//     printf("Unesite dve tacke za pravouganik.");
+//     printf("\n x1 i y1");
+//     scanf("%d %d",&x1,&y1);
+//     printf("\nUnesite x2 y2");
+//     scanf("%d %d",&x2,&y2);
+//     prr.doleLevo.x = x1;
+//     prr.doleLevo.y = y1;
+//     prr.goreDesno.x = x2;
+//     prr.goreDesno.y = y2;
+//     printf("Unesite tacku koja se testira:");
+//     scanf("%d %d",&x3,&y3);
+//     (*tt).x = x3;
+//     (*tt).y = y3;
+//     if(proveravanje(prr,tt)){
+//         printf("Nalazi se unutar pravouganika");
+//     }
+//     else{
+//         printf("Ne nalazi se!");
+//     }
 //     return 0;
 // }
