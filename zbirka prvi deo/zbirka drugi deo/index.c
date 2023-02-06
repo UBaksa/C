@@ -923,3 +923,37 @@
 // getche();
 // return 0;
 // }
+// 5.5. Дата је датотека BrojeviХ.txt која у сваком реду садржи по један природни број. Саставити
+// програм који формира датотеку BrojeviY.txt тако што из датотеке BrojeviX.txt преписује само оне
+// бројеве који се састоје од цифара 3 и 7.
+// main(){
+//     int broj,pom,cifr,ind;
+//     FILE a*, *b;
+//     a=fopen("BrojeviX.txt","r");
+//     if(a==NULL){
+//         printf("\nGreska nema memorije!");
+//         exit(1);
+//     }
+//     b=fopen("BrojeviY.txt","w");
+//     if(b==NULL){
+//         printf("\nGreska nema memorije!");
+//         exit(1);
+//     }
+//     while(fscanf(a,"%d",&broj) !=EOF){
+//         ind=1;
+//         pom=broj;
+//         while(pom!=0){
+//             cifr=pom%10;
+//             if(cifr!=3 && cifr!=7){
+//                 ind=0;
+//             }
+//             pom/=10;
+//         }
+//         if(ind && broj!=0){
+//             fprintf(b,"%d",broj);
+//         }
+//     }
+//     fclose(a);
+//     fclose(b);
+//     return 0;
+// }
