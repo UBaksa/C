@@ -957,3 +957,104 @@
 //     fclose(b);
 //     return 0;
 // }
+// #define MAX 100
+// main(){
+//     int i,n,broj,drugi,max;
+//     printf("Unesite broj n");
+//     scanf("%d",&n);
+
+//     for(i=1;i<=n;i++){
+//         scanf("%d",&broj);
+//         pom=i;
+//         if(pom>i){
+//             max=i;
+//         }
+//     }
+// }
+// zeka kupus kupus 
+
+// #define MAX 100
+
+// void matrica(int mat[MAX][MAX],int m){
+//     int i,j;
+//     for(i=0;i<m;i++){
+//         for(j=0;i<m;j++){
+//             scanf("%d",mat[i][j]);
+//         }
+//     }
+// }
+
+// main(){
+//     int m,i,j,kupus=0,br=0,a[MAX][MAX];
+//     char znak;
+//     printf("Unesite m");
+//     scanf("%d",&m);
+//     matrica(a,m);
+//     while(znak != 'k'){
+//         printf("Unesite karakter:");
+//         scanf("%s",&znak);
+//     }
+//     for(i=0;i<m;i++){
+//         for(j=0;j<m;j++){
+//             if(znak == 'l'){
+//                 j--;
+//                 br++;
+//             }
+//             if(znak == 'd'){
+//                 j++;
+//                 br++;
+//             }
+//             if(znak == 'n'){
+//                 i++;
+//                 br++;
+//             }
+//             if(znak == 'g'){
+//                 i--;
+//                 br++;
+//             }
+//             if((i=0 && znak == 'g')){}
+//         }
+//     }
+// }
+
+// main(){
+//     int i,n,cifra,pom,broj,sp=0,sn=0,br=0;
+//     printf("Unesite broj");
+//     scanf("%d",&n);
+//     broj=n;
+//     while(broj > 0){
+//         cifra=broj%10;
+//         broj/=10;
+//         br++;
+//         if(br % 2 == 0){
+//             sp+=cifra;
+//         }
+//         else{
+//             sn+=cifra;
+//         }
+//     }
+//     if(sp == sn){
+//         printf("Broj savrsen");
+//     }
+//     else{
+//         printf("Broj nije savrsen!");
+//     }
+//     return 0;
+// }
+// main(){
+//     itn    
+// }
+// FINTA ZA PROSTE FAKTORE!!!!!!!!!!!!!!!!!!!!!!!
+main(){
+    int broj,i,k,n;
+    printf("Unesite broj;");
+    scanf("%d",&broj);
+    n=broj;
+    for(i=2;i<broj/2;i++){
+        while(n%i==0){
+            printf("%d ",i);
+            n/=i;
+        }
+    }
+    return 0;
+}
