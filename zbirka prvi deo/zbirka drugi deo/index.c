@@ -1044,17 +1044,29 @@
 // main(){
 //     itn    
 // }
-// FINTA ZA PROSTE FAKTORE!!!!!!!!!!!!!!!!!!!!!!!
-main(){
-    int broj,i,k,n;
-    printf("Unesite broj;");
-    scanf("%d",&broj);
-    n=broj;
-    for(i=2;i<broj/2;i++){
-        while(n%i==0){
-            printf("%d ",i);
-            n/=i;
-        }
-    }
-    return 0;
-}
+// // FINTA ZA PROSTE FAKTORE!!!!!!!!!!!!!!!!!!!!!!!
+// main(){
+//     int broj,i,k,n;
+//     printf("Unesite broj;");
+//     scanf("%d",&broj);
+//     n=broj;
+//     for(i=2;i<broj/2;i++){
+//         while(n%i==0){
+//             printf("%d ",i);
+//             n/=i;
+//         }
+//     }
+//     return 0;
+// }
+// 25.	Napisati program kojim se nalaze delitelji prirodnog broja X<1000.
+// main(){
+//     int i,x;
+//     printf("Unesite x");
+//     scanf("%d",&x);
+//     for(i=2;i<x;i++){
+//         if(x%i==0){
+//             printf("%d\n500",i);
+//         }
+//     }
+//     return 0;
+// }
