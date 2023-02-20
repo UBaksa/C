@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 // 1.4. Саставити програм који штампа унети низ карактера ред по ред.
-#define MAX 100
+// #define MAX 100
 // main()
 // {
 //     char s[MAX+1];
@@ -1068,5 +1068,104 @@
 //             printf("%d\n500",i);
 //         }
 //     }
+//     return 0;
+// }
+// 12.	Napisati program kojim se na osnovu unetog trocifrenog broja N formiraju trocifreni brojevi sa istim ciframa ali takvi da im srednja cifra nije manja od dve susedne (Na primer, ako se učita 139, to su brojevi 193 i 391; ako se učita 535, to su 553 i 355; za 778, to je 787...).
+
+// main(){
+//     int n,a,b,c,pomocna;
+//     printf("Unesite broj N:");
+//     scanf("%d",&n);
+//     a=n/100;
+//     b=(n/10)%10;
+//     c=n%10;
+//     pomocna=a;
+//     if(c>pomocna){
+//         pomocna=c;
+//     }
+//     if(b>pomocna){
+//         pomocna=b;
+//     }
+//     if(pomocna==a){
+//         printf("%d%d%d\n",c,pomocna,b);
+//         printf("%d%d%d",b,pomocna,c);
+//     }
+//     if(pomocna==b){
+//         printf("%d%d%d\n",c,pomocna,a);
+//         printf("%d%d%d",a,pomocna,c);
+//     }
+//     if(pomocna==c){
+//         printf("%d%d%d\n",a,pomocna,b);
+//         printf("%d%d%d",b,pomocna,a);
+//     }
+//     return 0;
+// }
+// 15.	Ako se sa ulaza učitava trocifren prirodan broj n, napisati program kojim se određuje najmanji mogući trocifreni broj m od cifara broja n.
+// Primer: Ako je n=312, tada je m=123; ako je n=252, tada je m=225; ako je n=301, tada je m=103; Ako je n=200, tada je m=200.
+
+// main(){
+//     int n,a,b,c,broj,broj2,min;
+//     printf("Unesite trocifren n broj;");
+//     scanf("%d",&n);
+//     a=n/100;
+//     b=n/10%10;
+//     c=n%10;
+//     min=a;
+//     if(min>b){
+//         min=b;
+//     }
+//     if(min>c){
+//         min=c;
+//     }
+//     if(min==0){
+//         if(b==0 && c==0){
+//             printf("nije moguce napraviti trocifreni broj.");
+//         }
+//         if(b!=0 && b<c){
+//             min=b;
+//         }
+//         if(c!=0 && c<b){
+//             min=c;
+//         }
+//     }
+//     if(min==a){
+//         broj=100*a + 10*b + c;
+//         broj2=100*a + 10*c + c;
+//         if(broj>broj2){
+//             printf("%d",broj2);
+//         }
+//         else{
+//             printf("%d",broj);
+//         }
+//     }
+//     if(min==b){
+//         broj=100*b + 10*a + c;
+//         broj2=100*b + 10*c + a;
+//         if(broj>broj2){
+//             printf("%d",broj2);
+//         }
+//         else{
+//             printf("%d",broj);
+//         }
+//     }
+//     if(min==c){
+//         broj=100*c + 10*b + a;
+//         broj2=100*c + 10*a + b;
+//         if(broj>broj2){
+//             printf("%d",broj2);
+//         }
+//         else{
+//             printf("%d",broj);
+//         }
+//     }
+//     return 0;
+// }
+// 20.	Napisati program kojim se za date prirodne brojeve m i n određuje suma m poslednjih cifara broja n.
+// main(){
+//     int i,n,m,s=0,pom,cifra,br=0;
+//     printf("Unesite broj m ");
+//     scanf("%d",&m);
+//     printf("Unesite broj n ");
+//     scanf("%d",&n);
 //     return 0;
 // }
