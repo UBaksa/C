@@ -1167,5 +1167,78 @@
 //     scanf("%d",&m);
 //     printf("Unesite broj n ");
 //     scanf("%d",&n);
+//     pom=n;
+//     while(pom>0){
+//         cifra=pom%10;
+//         pom/=10;
+//         br++;
+//         s+=cifra;
+//         if(br==m){
+//             break;
+//         }
+//         if(m>br){
+//             continue;
+//         }
+//     }
+//     printf("\nSuma m cifara je %d",s);
+//     return 0;
+// }
+// 26.	Ispisati sve savršene brojeve do 1000. Savršen broj je onaj koji je jednak sumi svojih delitelja isključujući njega (npr. 6=3+2+1).
+// main(){
+//     int s,broj,i,j;
+//     for(i=1;i<1000;i++){
+//         s=0;
+//         for(j=1;j<i;j++){
+//             if(i%j==0){
+//                 s+=j;
+//             }
+//         }
+//         if(s==i){
+//             printf("%d ",i);
+//         }
+//     }
+//     return 0;
+// }
+
+// 27.	Napisati program za nalaženje najvećeg zajedničkog delioca za brojeve A i B
+
+// main(){
+//     int i,a,b,max,delilac;
+//     printf("Unesite a");
+//     scanf("%d",&a);
+//     printf("Unesite b");
+//     scanf("%d",&b);
+//     max=a;
+//     if(b>max){
+//         max=b;
+//     }
+//     i=1;
+//     while(max>i){
+//         if(a%i==0 && b%i==0){
+//             delilac=i;
+//         }
+//         i++;
+//     }
+//     printf("Najveci zajednicki delilac je %d",delilac);
+//     return 0;
+// }
+// 29.	Ispisati sve trocifrene brojeve čija je suma cifara jednaka učitanom broju X.
+// main(){
+//     int i,b,s=0,cifra,pom;
+//     printf("Unesite b");
+//     scanf("%d",&b);
+//     i=100;
+//     while(i<1000){
+//         pom=i;
+//         while(i>0){
+//             cifra=pom%10;
+//             s+=cifra;
+//             pom/=10;
+//             if(b==s){
+//                 printf("%d ",i);
+//             }
+//         }
+//         i++;
+//     }
 //     return 0;
 // }
