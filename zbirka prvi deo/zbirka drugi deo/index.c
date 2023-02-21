@@ -1242,3 +1242,162 @@
 //     }
 //     return 0;
 // }
+// 1.	Napisati program kojim se k-ta vrsta matrice A uređuje rastuće. Učitavanje matrice i traženu obradu realizovati pomoću odvojenih potprograma. (Malmudirović Damir)
+// void ucitavanje(int m,int n,int mat[n][m]){
+//     printf("Unesite matricu");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+// }
+// void ispisi(int m,int n,int mat[n][m]){
+//     printf("Matrica izgleda ovako:\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             printf("%d ",mat[i][j]);
+//         }
+//         printf("\n");
+//     }
+// }
+// #define MAX 100
+// main(){
+//     int i,j,m,n,k,pom,mat[MAX][MAX];
+//     printf("Unesite formate n i m");
+//     scanf("%d%d",&n,&m);
+//     printf("Unesite k-tu vrstu");
+//     scanf("%d",&k);
+//     printf("Unesite matricu:\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     printf("\nUneta matrica:\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             printf("%d ",mat[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     for(i=0;i<n;i++){
+//         if(mat[i][k-1]<mat[i+1][k-1]){
+//         pom=mat[i][k-1];
+//         mat[i][k-1]=mat[i+1][k-1];
+//         mat[i+1][k-1]=pom;
+//         }
+//     }
+//     printf("\nUneta matrica(ponovo):\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             printf("%d ",mat[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+// 2.	Napisati program kojim se određuje da li je matrica A savršena. Matrica je savršena ako je suma elemenata svake vrste veća od nule. Za određivanje sume elemenata u vrsti napraviti funkciju. 
+// #define MAX 100
+// main(){
+//     int n,mat[MAX][MAX],s=0,i,j;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Unesite matricu:\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     printf("\nUneta matrica:\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             printf("%d ",mat[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     for(j=0;j<n;j++){
+//         for(i=0;i<n;i++){
+//             s+=mat[i][j];
+//         }
+//         if(s>0){
+//             printf("Matrica je savrsena!,%d",s);
+//         }
+//         else{
+//             printf("Nije! %d",s);
+//         }
+//         s=0;
+//     }
+//     return 0;
+// }
+// 22.	Napisati program kojim se vrši zamena mesta najvećeg i najmanjeg elemenata ispod sporedne dijagonale matrice X. Učitavanje matrice i traženu obradu realizovati pomoću odvojenih funkcija. 
+// #define MAX 100
+// main(){
+//     int mat[MAX][MAX],i,j,n,min,max,pom;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Unesite elemente:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     printf("Uneta matrica:\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             printf("%d ",mat[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             while(i+j==n-1){
+//                 min=mat[i][j];
+//                 max=mat[i][j];
+//                 if(mat[i+1][j]>max){
+//                     max=[i+1][j];
+//                 }
+//                 if(mat[i+1][j]<min){
+//                     min=mat[i+1][j];
+//                 }
+//                 if(mat[i][j+1]>max){
+//                     max=[i][j+1];
+//                 }
+//                 if(mat[i][j+1]<min){
+//                     min=mat[i][j+1];
+//                 }
+//             }
+//             pom=min;
+//             min=max;
+//             max=pom;
+//         }
+//     }
+//     return 0;
+// }
+// 11.6. Саставити програм који учита матрицу димензија nxn, а затим је исписује у облику таблице и
+// израчунава и исписује суму елемената у свакој врсти. Елементи матрице су цели бројеви.
+// #define MAX 100
+// main(){
+//     int mat[MAX][MAX],i,j,n,s=0;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     printf("Unesite matricu:\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     printf("Uneta matrica:\n");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             printf("%d ",mat[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             s+=mat[i][j];
+//         }
+//         printf("%d ",s);
+//     }
+//     return 0;
+// }
