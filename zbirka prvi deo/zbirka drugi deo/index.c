@@ -1398,6 +1398,66 @@
 //             s+=mat[i][j];
 //         }
 //         printf("%d ",s);
+// //     }
+// //     return 0;
+// // }
+// main(){
+//     int broj,i,pom;
+//     printf("Unesite broj:");
+//     scanf("%d",&broj);
+//     pom=broj;
+//     for(i=2;i<broj;i++){
+//         while(pom%i==0){
+//             printf("%d ",i);
+//             pom=pom/i;
+//         }
 //     }
 //     return 0;
+// }
+// #define MAX 100
+// main(){
+//     int niz[MAX],i,n,budzet,br=0,s=0;
+//     printf("Unesite koliko zelite automobila u opseg");
+//     scanf("%d",&n);
+//     printf("Unesite cene automobila redom:");
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     printf("Unesite budzet:");
+//     scanf("%d",&budzet);
+//     for(i=0;i<n;i++){
+//         if(niz[i]<budzet){
+//             br++;
+//             s+=niz[i];
+//         }
+//         if(s>budzet){
+//             break;
+//         }
+//     }
+//     printf("Mozemo kupiti najvice %d automobila",br);
+//     return 0;
+// }
+// #define MAX 100
+// main(){
+//     int i,j,mat[MAX][MAX],n,m,kvarmax,kvar;
+//     printf("Unesite n i m");
+//     scanf("%d%d",&n,&m);
+//     printf("Unesite elemente:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             scanf("%d",&mat[i][j]);
+//         }
+//     }
+//     printf("\nUneta matrica:");
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+//             printf("%d ",mat[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     for(i=0;i<n;i++){
+//         for(j=0;j<m;j++){
+
+//         }
+//     }   
 // }
