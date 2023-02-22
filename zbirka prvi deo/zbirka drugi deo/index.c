@@ -1461,3 +1461,111 @@
 //         }
 //     }   
 // }
+// #define MAX 100
+// main(){
+//     int i,n,niz[MAX],niz1[MAX],niz2[MAX],br=0;
+//     printf("Unesite n");
+//     scanf("%d",&n);
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         scanf("%d",&niz1[i]);
+//     }
+//     for(i=0;i<n;i++){
+//         if(niz[i]==niz1[i]){
+//             printf("%d ",niz[i]);            
+//         }
+//     }
+//     return 0;
+// }
+// main()
+// {
+//     int broj,pom,cifra,s1=0,s2=0,i,br=0;
+//     printf("Unesite broj");
+//     scanf("%d",&broj);
+//     pom=broj;
+//     while(pom>0){
+//         cifra=pom%10;
+//         pom/=10;
+//         br++;
+//         if(br%2==0){
+//             s1+=cifra;
+//         }
+//         if(br%2!=0){
+//             s2+=cifra;
+//         }
+//     }
+//     if(s1==s2){
+//         printf("Broj je savrsen");
+//     }
+//     else{
+//         printf("Broj nije savrsen");
+//     }
+//     return 0;
+// }
+// #define MAX 100
+// typedef struct artikli{
+//     int barkod;
+//     char ime[30];
+//     int cena;
+// }ARTIKLI;
+
+// main(){
+//     ARTIKLI artikal[MAX];
+//     int i=0;
+//     FILE *dato;
+//     dato=fopen("proizvodi.txt","r");
+//     if(dato==NULL){
+//         printf("Greska!");
+//         exit(1);
+//     }
+//     printf("Proizvodi sa cenom nizom od 500 dinara");
+//     while(1){
+//         fscanf(dato,"%d%s%d",&artikal[i].barkod,&artikal[i].ime,&artikal[i].cena);
+//         if(feof(dato)){
+//             break;
+//         }
+//         if(artikal[i].cena<500){
+//             printf("%d %s %d \n",artikal[i].barkod,artikal[i].ime,artikal[i].cena);
+//         i++;
+//         }
+//     }
+//     fclose(dato);
+//     return 0;
+// }
+#define MAX 100
+typedef struct artikli{
+    int barkod;
+    char ime[30];
+    int cena;
+    float PDV;
+}ARTIKLI;
+
+main(){
+    ARTIKLI artikal[MAX];
+    int i=0;
+    FILE *dato,*dato2;
+    dato=fopen("proizvodiPDV.txt","r");
+    if(dato==NULL){
+        printf("GRESKA!");
+        exit(1);
+    }
+    dato2=fopen("proizvodiPDVNovo.txt","w");
+    if(dato2==NULL){
+        printf("GRESKA");
+        exit(1);
+    }
+    while(1){
+        fscanf("%d%s%d%f",&artikal[i].barkod,&artikal[i].ime,&artikal[i].cena,&artikal[i].PDV);
+        if(feof(dato)){
+            break;
+        }
+        artikal[i].cena=artikal[i].cena*(1+artikal[i].PDV);
+        fprintf(dato,"%d %s %d %f",artikal[i].barkod,artikal[i].barkod,artikal[i].cena,artikal[i].PDV);
+        i++;
+    }
+    fclose(dato);
+    fclose(dato2);
+    return 0;
+}
