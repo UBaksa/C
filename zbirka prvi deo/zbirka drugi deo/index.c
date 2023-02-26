@@ -1534,38 +1534,38 @@
 //     fclose(dato);
 //     return 0;
 // }
-#define MAX 100
-typedef struct artikli{
-    int barkod;
-    char ime[30];
-    int cena;
-    float PDV;
-}ARTIKLI;
+// #define MAX 100
+// typedef struct artikli{
+//     int barkod;
+//     char ime[30];
+//     int cena;
+//     float PDV;
+// }ARTIKLI;
 
-main(){
-    ARTIKLI artikal[MAX];
-    int i=0;
-    FILE *dato,*dato2;
-    dato=fopen("proizvodiPDV.txt","r");
-    if(dato==NULL){
-        printf("GRESKA!");
-        exit(1);
-    }
-    dato2=fopen("proizvodiPDVNovo.txt","w");
-    if(dato2==NULL){
-        printf("GRESKA");
-        exit(1);
-    }
-    while(1){
-        fscanf("%d%s%d%f",&artikal[i].barkod,&artikal[i].ime,&artikal[i].cena,&artikal[i].PDV);
-        if(feof(dato)){
-            break;
-        }
-        artikal[i].cena=artikal[i].cena*(1+artikal[i].PDV);
-        fprintf(dato,"%d %s %d %f",artikal[i].barkod,artikal[i].barkod,artikal[i].cena,artikal[i].PDV);
-        i++;
-    }
-    fclose(dato);
-    fclose(dato2);
-    return 0;
-}
+// main(){
+//     ARTIKLI artikal[MAX];
+//     int i=0;
+//     FILE *dato,*dato2;
+//     dato=fopen("proizvodiPDV.txt","r");
+//     if(dato==NULL){
+//         printf("GRESKA!");
+//         exit(1);
+//     }
+//     dato2=fopen("proizvodiPDVNovo.txt","w");
+//     if(dato2==NULL){
+//         printf("GRESKA");
+//         exit(1);
+//     }
+//     while(1){
+//         fscanf("%d%s%d%f",&artikal[i].barkod,&artikal[i].ime,&artikal[i].cena,&artikal[i].PDV);
+//         if(feof(dato)){
+//             break;
+//         }
+//         artikal[i].cena=artikal[i].cena*(1+artikal[i].PDV);
+//         fprintf(dato,"%d %s %d %f",artikal[i].barkod,artikal[i].barkod,artikal[i].cena,artikal[i].PDV);
+//         i++;
+//     }
+//     fclose(dato);
+//     fclose(dato2);
+//     return 0;
+// }
