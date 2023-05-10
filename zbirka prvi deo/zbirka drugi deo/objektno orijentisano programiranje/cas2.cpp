@@ -18,7 +18,7 @@ void zamena(int *a,int *b){
     *a=*b;
     *b=pom;
 }
-// Kad se menjaju mesta moja da se radi preko pokazivaca da bi s sacuvala vrednost neke promenljive.
+// Kad se menjaju mesta mora da se radi preko pokazivaca da bi s sacuvala vrednost neke promenljive.
 void zamena2(int &a,int &b){
     int pom=a;
     a=b;

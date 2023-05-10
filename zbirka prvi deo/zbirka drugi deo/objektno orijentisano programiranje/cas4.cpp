@@ -73,7 +73,7 @@ using namespace std;
 //     }
 //     }
 //     char pop(){
-//         if(top>-1){
+//         if(top > -1){
 //         return s[top--];
 //         // char c = s[top];
 //         // top--;
@@ -97,7 +97,7 @@ using namespace std;
 // //         }
 // //     }
 // //     bool full(){
-// //         if(top == max_len =1){
+// //         if(top == max_len - 1){
 // //             return true;
 // //         }
 // //         else{
