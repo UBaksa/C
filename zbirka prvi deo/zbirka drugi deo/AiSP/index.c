@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#include <stdlib.h>
 
 // // binarno pretrazivanje-podela na pola!
 
@@ -100,7 +101,38 @@ void deleteZadati(NODE *pom){
     pom->data=temp->data;//kopiramo datu-vrednost od tempa
     free(temp);//brisemo temp.
 }
+//brisanje na zadatoj poziciji!
+void deleteOnPosition(int pozicija){
+    int brojac=1;
+    NODE *p,*q;
+    p=first;
+    q=NULL;
+    if(pozicija==1){
+        first=p->next;
+        free(p);
+        return;
+    }
+    while(pozicija!=brojac){
+        q=p;
+        p=p->next;
+        brojac++;
+    }
+    deleteAfter(q);
+}
+//prikaz
+void display(){
+    temp=first;
+    printf("First->");
+    while(temp!=NULL){
+        printf("|%d| -->",temp->data);
+        temp=temp->next;
+    }
+    printf(" NULL");
+}
 main(){
     create(5);
+    create(5);
+    create(5);
+    display();
     return 0;
 }
