@@ -115,13 +115,73 @@ class Pitanje{
 //treca klasa
 
 class Oblik{
-    
+    public:
+    double a;
+    public:
+    Oblik(){
+        a=5;
+    }
+    virtual double Povrsina() = 0;
+    virtual double Obim() = 0;
+};
+class Trougao : public Oblik{
+    public:
+    double b,c;
+    public:
+    Trougao(){
+        b=2;
+        c=3;
+    }
+    double Povrsina(){
+        double S = (a+b+c)/2;
+        return sqrt(S*(S-a)*(S-b)*(S-c));
+    }
+    double Obim(){
+        return a+b+c;
+    }
+}
+class Kvadrat : public Oblik{
+    public:
+    double Povrsina(){
+        return a*a;
+    }
+    double Obim(){
+        return 4*a;
+    }
+};
+class Skup{
+    public:
+    Oblik* *oblici;//gledamo baznu klasu da l je to trougao ili kvadrat nije bitno
+    int broj;
+    public:
+    Skup(int b){
+        this->broj=b;
+        oblici=new Oblik*[broj];
+        trenutno =0;
+    }
+    void dodajOblik(Oblik *o){
+        if(trenutno<broj){
+            if(Trougao*t = dynamic_cast<Trougao*>(o)){
+                cout<<"Stigao je jedan trougao">>endl;
+            }
+            oblici[trenutno++]=o;
+        }
+    }
+    double ukupnaPovrsina(){
+        double s=0;
+        for(int i=0;i<trenutno;i++){
+            s+=oblici[i]->Povrsina();
+        }
+        return s;
+    }
 }
 int main(){
 // ocekvianje na ispitu:da na testu svako pitanje ima redni broj.da odgovor ima redni broj koji je odgovor na tom pitanju.
 // sa statickim atributima da se radi.
 // sastaviti program koji kreira klasu abstraktnu klasu Oblik i klase Trougao,Kvadrat ...
 // Kreirati klasu Skup koja ima n oblika;// abstrakna klasa je klasa ako ima ili cistu ili potpuno cistu ili virtuelnu metodu.
-
+//jos koji zadatak;prilikom dodavanja oblika,proveri da li je taj oblik trougao ili pravouganik,ako je trougao dodaj mu posebne dodatke ili postavi enumerator,ili povecaj broj trouglova.
+//instanceof proverava da li je neki objekat/klasa tipa kojeg mi unesemo npr (instanceof<Trougao>(o));
+// abstraktne klase i virtualne metode MORAJU da se provezbaju!?!?!?!?!?!?!?!?!?!?!?!?!??!?!?!?!?!?!?!?!?!?!?!?!!??!!!?!??!?
 return 0;
 }
