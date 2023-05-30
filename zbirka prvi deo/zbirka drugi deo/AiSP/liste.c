@@ -260,6 +260,41 @@ void brisiPrvi(){
     first=first->next;
     free(temp);
 }
+// 8. Write a program in C to delete a node from the middle of a Singly Linked List.
+void brisiSredinu(){
+    int ukupno=brojacanik();
+    int ukupno2=brojacanik()/2;
+    sredina=first;
+    prethodnik=first;
+    for(int i=1;i<ukupno2+1;i++){
+         prethodnik=sredina;
+         sredina=sredina->next;
+     }
+     prethodnik->next=sredina->next;
+     free(sredina);
+}
+// 9. Write a program in C to delete the last node of a Singly Linked List.
+void brisiposlednji(){
+    temp=first;
+    zadnji=first;
+    while(zadnji->next!=NULL){
+        temp=zadnji;
+        zadnji=zadnji->next;
+    }
+    temp->next=NULL;
+    zadnji=NULL;
+    free(zadnji);
+}
+// 10. Write a program in C to search for an existing element in a singly linked list.
+void search(int position){
+    odredjena=first;
+    temp=first;
+    for(int i=1;i<position;i++){
+        temp=odredjena;
+        odredjena=odredjena->next;
+    }
+    printf("cvor koji ste trazili ima vrednost %d",odredjena->data);
+}
 main(){
     int i,elem,n;
     printf("Unesite broj cvorova koliko zelite\n");
@@ -276,7 +311,10 @@ main(){
     // naKraj(3);
     // printf("\nNakon dodavanja na kraj!");
     // uSredinu(25);
-    brisiPrvi();
+    // brisiPrvi();
+    // brisiSredinu();
+    // brisiposlednji();
+    // search(3);
     printf("\n");
     display();
     return 0;
