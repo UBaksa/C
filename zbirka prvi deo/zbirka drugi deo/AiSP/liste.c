@@ -295,6 +295,37 @@ void search(int position){
     }
     printf("cvor koji ste trazili ima vrednost %d",odredjena->data);
 }
+void niz(){
+    int i=0;
+    temp=first;
+    int niz[100];
+    while(temp!=NULL){
+        niz[i]=temp->data;
+        temp=temp->next;
+        printf("%d",niz[i]);
+        i++;
+    }
+}
+// 13. Write a C program to merge two sorted singly linked lists into a single sorted linked list.
+void sortiraj(int num_of_nodes){
+  
+    printf("\n");
+    int br1,pom,br2;
+    for(int br1=num_of_nodes-2;br1>=0;br1--){
+        
+        curr=first;
+        next=first->next;
+        for(int br2=0;br2<=br1;br2++){
+            if(curr->data>next->data){
+                pom=next->data;
+                next->data=curr->data;
+                curr->data=pom;
+            }
+            curr=next;
+            next=next->next;
+        }
+    }
+}
 main(){
     int i,elem,n;
     printf("Unesite broj cvorova koliko zelite\n");
@@ -316,6 +347,8 @@ main(){
     // brisiposlednji();
     // search(3);
     printf("\n");
+    // niz();
+    
     display();
     return 0;
 }

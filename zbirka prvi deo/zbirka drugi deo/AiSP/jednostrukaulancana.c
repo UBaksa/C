@@ -38,7 +38,6 @@ void create(int el){
 struct NODE *reverse(NODE *first)
 {   
     curr=first;
-    
     while (curr != NULL) {
         next = curr->next;
         curr->next = prev;
