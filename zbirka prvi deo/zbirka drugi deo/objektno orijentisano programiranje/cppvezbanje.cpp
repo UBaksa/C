@@ -167,4 +167,102 @@ t1.dodaj(p1);
 cout<<t1;
 t1.ispis();
     return 0;
+},
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+class Let{
+    protected:
+    string polaznaD;
+    string dolaznaD;
+    string datum;
+    int brojM;
+    int brojR;
+    public:
+    Let(string p,string d,string dat,int bm,int br){
+        polaznaD=p;
+        dolaznaD=d;
+        datum=dat;
+        brojM=bm;
+        brojR=br;
+    }
+    virtual int getBrSlobodnih(){return brojM - brojR;}
+    virtual void rezervacija(){
+        if(brojR!=brojM){brojR++;
+        cout<<"uspesno ste rezervisali let"<<endl;}
+        else cout<<"Sva mesta su rezervisana"<<endl;
+    }
+    virtual void Ispis(){
+        cout<<"Let iz "<<polaznaD<<" do "<<dolaznaD<<endl;
+        cout<<"Polazak "<<datum<<" broj mesta: "<<brojM<<" broj rezervisanih :"<<brojR<<endl;
+    }
+    virtual string getClass(){return "let";}
+};
+
+class RedovniLet:public Let{
+    public:
+    RedovniLet(string p,string d,string dat,int bm,int br):Let(p,d,dat,bm,br){}
+    virtual void Ispis(){
+        cout<<"Redovan let iz "<<polaznaD<<" do "<<dolaznaD<<endl;
+        cout<<"Polazak "<<datum<<" broj mesta: "<<brojM<<" broj rezervisanih :"<<brojR<<endl<<endl;
+    }
+        virtual string getClass(){return "RedovniLet";}
+
+};
+
+
+class CarterLet:public Let{
+    protected:
+    int brojV;
+    public:
+    CarterLet(string p,string d,string dat,int bm,int br,int bv):Let(p,d,dat,bm,br){brojV=bv;}
+    virtual void Ispis(){
+        cout<<"Carter let iz "<<polaznaD<<" do "<<dolaznaD<<endl;
+        cout<<"Polazak "<<datum<<" broj mesta: "<<brojV<<" broj rezervisanih :"<<brojR<<endl<<endl;
+    }
+    virtual void rezervacija(){
+        if(brojR<=brojV){brojR++;
+        cout<<"uspesno ste rezervisali let"<<endl<<endl;}
+        else cout<<"Sva mesta su rezervisana"<<endl<<endl;
+    }
+    virtual int getBrSlobodnih(){return brojV - brojR;}
+    virtual string getClass(){return "CarterLet";}
+
+
+};
+
+template<typename T>
+void dodaj(Let** &letovi,int &brletova,int maxLetova,T& let){
+    if(let.getBrSlobodnih()>0){
+        if(let.getClass()=="CarterLet")letovi[brletova++]= &let;
+        else if(let.getClass()=="RedovniLet")letovi[brletova++]=&let;
+        cout<<"let je uspesno dodat"<<endl;
+    }
+    
+}
+int main()
+{
+CarterLet l1("Beograd","Tivat","16.5.2023 10:30:20",120,110,120),
+l2("Nju Jork","Tivat","24.2.2023 11:30:21",120,110,120);
+
+RedovniLet l3("Beograd","Amsterdam","21.5.2021 11:10:20",120,110),
+l4("Ankara","Istanbul","11.5.2023 11:30:20",120,110);
+int maxLetova,brletova=0;
+cin>>maxLetova;
+
+Let *letovi=new Let[maxLetova];
+letovi[0]=new CarterLet("Beograd","Tivat","16.5.2023 10:30:20",120,18,120);
+letovi[1]=new CarterLet("Nju Jork","Tivat","24.2.2023 11:30:21",120,105,120);
+letovi[2]=new RedovniLet("Beograd","Amsterdam","21.5.2021 11:10:20",110,110);
+letovi[3]=new RedovniLet("Ankara","Istanbul","11.5.2023 11:30:20",120,110);
+brletova=4;
+dodaj(letovi,brletova,maxLetova,l1);
+for(int i=0;i<brletova;i++){
+    letovi[i]->Ispis();
+}
+
+return 0;
 }
