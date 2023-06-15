@@ -152,3 +152,78 @@ using namespace std;
 //         return out;
 //     }
 // }
+
+// 1.	 (35 poena)  Realizovati sledeće klase (klase opremiti onim konstruktorima, destruktorima i operatorima dodele (preklopljenim operatorima) koji su potrebni za bezbedno i efikasno korišćenje.
+// Klasa Artikal ima naziv, realnu cenu i celobrojni iznos popusta (podrazumevano 0).
+// Podaci artikla se zadaju pri stvaranju (nije potrebna provera). Može da se ispisati naziv, cena sa popustom i iznos popusta. Na glavnom izlazu se ispisuje u obliku naziv(cena_sa_popustom).
+
+class Artikal{
+    string naziv;
+    float cena;
+    int popust=0;
+    public:
+    Artikal(string naziv,float cena,int popust){
+        this->naziv=naziv;
+        this->cena=cena;
+        this->popust=popust;
+    }
+    void ispis(){
+        cout<<naziv<<endl;
+        cout<<cena-(cena*popust/100)<<endl;
+    }
+
+}
+
+
+// 2.	Klasa Stavka računa se kreira za zadati artikal i zadatu celobrojnu količinu. Stavki računa se dodeljuje redni broj na računu prilikom dodavanja stavke na račun. Može da se izračuna iznos stavke računa kao proizvod količine i cene artikla. Omogućiti kopiranje vrednosti pomoću kopi konstruktora.
+// Može se ispisati artikal stavke. Na glavnom izlazu se ispisuje u obliku:
+// S redni_broj_na_računu(artikal):količina|iznos.
+// U main funkciji kreirati 2 objekta klase Stavka i testirati sve metode. Kreirati i treći objekat kao kopiju prvog
+
+class Stavka{
+    Artikal artikal;
+    int kolicina;
+    int rednibroj;
+    public:
+    Stavka(int kolicina,int rednibroj,string naziv,float cena,int popust):Artikal(naziv,cena,popust){
+        this->kolicina=kolicina;
+    }
+    void iznosStavke(){
+        float iznos=0;
+        iznos=kolicina*artikal.getCena();
+        return iznos;
+    }
+    Stavka(Stavka &stav){
+        artikal=stav.artikal;
+        kolicina=stav.kolicina;
+        rednibroj=stav.rednibroj;
+    }
+
+}
+
+// 3.Koristeći klase iz prethodnog zadatka proširiti program tako da se doda klasa Račun koja sadrži proizvoljan broj stavki(niz stavki) i celobrojni iznos dodatnog popusta.
+// Stvara se prazan, nakon čega se stavke dodaju pojedinačno. Dodavanje stavke odraditi preklapanjem operatora += (račun += stavka). Može da se postavi iznos dodatnog popusta.Može da se izračuna iznos računa kao suma iznosa svih pojedinačnih stavki na računu. Ukoliko postoji dodatni popust, on se obračunava samo za artikle koji već nisu na popustu. Na glavnom izlazu se ispisuje u obliku Racun: iznos_računa, a zatim se u svakom redu ispisuje po jedna stavka u obliku: stavka [iznos_sa_dodatnim_popustom].
+//  U main funkciji stvoriti jedan  objekat klase račun i u njega dodati nekoliko stavki
+// sa po jednim artiklom. Ispisati stanje računa nakon dodavanja tih stavki.
+
+class Racun{
+    Stavka *s;
+
+    int proizvoljan;
+    int trenutnobroj=0;
+    float ceoiznos=0;
+    public:
+    Racun(int proizvoljan,float ceoiznos){
+        this->proizvoljan=proizvoljan;
+        s=new Stavka[proizvoljan];
+        this->ceoiznos=ceoiznos;
+    }
+    Racun& operator+=(Stavka& p){
+        if(proizvoljan>trenutnobroj){
+            s[trenutnobroj]=p;
+            trenutnobroj++;
+        }
+        return *this;
+    }
+}
+

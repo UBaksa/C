@@ -45,7 +45,7 @@ class Otpornik:public Proizvod{
         return false;
     }
     friend ostream& operator<<(ostream& out, Otpornik& o) {
-        out << static_cast<Proizvod&>(o) << "Otpornost: " << o.otpornost << (o.Provera() ? " defektan" : " nije defektan") << endl;
+        return out<<p.barKod<<" "<<p.cena<<" kolicina: "<<p.kolicina<<endl; << "Otpornost: " << o.otpornost << (o.Provera() ? " defektan" : " nije defektan") << endl;
         return out;
     }
     virtual string getTip()const{return tip;}
@@ -70,7 +70,7 @@ class Kondenzator:public Proizvod{
         out<<static_cast<Proizvod&>(o)<<" "<<o.kapacitivnost<<(o.Provera()?" defektan":" nije defektan")<<endl;
         return out;
     }
-       virtual string getTip()const{return tip;}
+       virtual string getTip(){return tip;}
 
 };
 
@@ -151,7 +151,7 @@ class Traka{
 
 int main()
 {
-    float niz1[2]={ 1.0, 10.0 };
+float niz1[2]={ 1.0, 10.0 };
 Proizvod* p3 = new Otpornik("3", 100.0, 10, 1, niz1);
 Proizvod* p4 = new Otpornik("4", 200.0, 5, 2000, niz1);
 Proizvod* p1 = new Kondenzator("1", 200.0, 5, 0);
